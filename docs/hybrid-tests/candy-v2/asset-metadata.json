@@ -1,0 +1,23 @@
+{
+  "assets": [
+    {
+      "path": "public/videos/level-03/l03_candy_001_v2.mp4",
+      "bytes": 9002749,
+      "sha256": "0948748697b563a4723fbd63af0c9141b894bd7652eb24863cad4a82af4ee0d9"
+    },
+    {
+      "path": "public/videos/level-03/l03_candy_001_v2_faststart.mp4",
+      "bytes": 8821616,
+      "sha256": "bb65f81005d254c3cf812721ba3f91b9cd60e41b2cf81d4d555517c30746e5fb"
+    },
+    {
+      "path": "public/references/level-03/l03_candy_001_v2_reference.png",
+      "bytes": 2523091,
+      "sha256": "deae345ac2316538deab9b8d9d17a532904ee900170bae0460dca5c54d3d2559"
+    }
+  ],
+  "videoPackets": 190,
+  "streamCopyPacketsIdentical": true,
+  "source": "user-provided Google Flow v2; no new AI generation",
+  "state": "poc-only"
+}

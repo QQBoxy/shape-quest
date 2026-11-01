@@ -1,0 +1,62 @@
+[
+  {
+    "file": "public/videos/level-03/fades/002-original-12.mp4",
+    "overlapFrames": 12,
+    "frames": 178,
+    "fps": "24/1",
+    "duration": "7.416667",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "width": 1280,
+    "height": 720,
+    "audio": false
+  },
+  {
+    "file": "public/videos/level-03/fades/002-original-16.mp4",
+    "overlapFrames": 16,
+    "frames": 174,
+    "fps": "24/1",
+    "duration": "7.250000",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "width": 1280,
+    "height": 720,
+    "audio": false
+  },
+  {
+    "file": "public/videos/level-03/fades/002-original-20.mp4",
+    "overlapFrames": 20,
+    "frames": 170,
+    "fps": "24/1",
+    "duration": "7.083333",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "width": 1280,
+    "height": 720,
+    "audio": false
+  },
+  {
+    "file": "public/videos/level-03/fades/002-original-24.mp4",
+    "overlapFrames": 24,
+    "frames": 166,
+    "fps": "24/1",
+    "duration": "6.916667",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "width": 1280,
+    "height": 720,
+    "audio": false
+  },
+  {
+    "file": "public/videos/level-03/fades/002-original-4.mp4",
+    "overlapFrames": 4,
+    "frames": 186,
+    "fps": "24/1",
+    "duration": "7.750000",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "width": 1280,
+    "height": 720,
+    "audio": false
+  }
+]

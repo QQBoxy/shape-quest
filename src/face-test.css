@@ -1,0 +1,22 @@
+:root { font-family: system-ui, sans-serif; color: #283e45; background: #f4f8f5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.face-lab { max-width: 1280px; margin: auto; padding: 24px; }
+.face-lab a { color: #356651; }
+.face-lab h1 { margin-bottom: 8px; }
+.face-lab p { line-height: 1.7; }
+.lab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.lab-grid section { min-width: 0; background: white; border: 1px solid #d1e2da; border-radius: 16px; padding: 20px; }
+.lab-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+.face-lab button, .face-lab select { font: inherit; padding: 12px; border: 1px solid #a2b8af; border-radius: 8px; margin: 4px 0; max-width: 100%; }
+.face-lab button { background: #e4f2e9; cursor: pointer; }
+.face-lab button:disabled { opacity: .5; cursor: default; }
+.face-lab :focus-visible { outline: 3px solid #7648c9; outline-offset: 2px; }
+#lab-camera { width: 100%; height: auto; border-radius: 12px; background: #243a37; }
+.lab-table { overflow-x: auto; }
+.face-lab table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+.face-lab th, .face-lab td { padding: 8px; text-align: right; border-bottom: 1px solid #dce8e2; white-space: nowrap; }
+.face-lab th:first-child { text-align: left; }
+.face-lab progress { width: 100%; accent-color: #428464; }
+#lab-parts { font-variant-numeric: tabular-nums; }
+@media (max-width: 850px) { .lab-grid { grid-template-columns: 1fr; } .face-lab { padding: 12px; } .lab-grid section { padding: 12px; } }

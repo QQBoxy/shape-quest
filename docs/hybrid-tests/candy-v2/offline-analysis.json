@@ -1,0 +1,782 @@
+{
+  "source": "public/videos/level-03/l03_candy_001_v2.mp4",
+  "videoFrames": 190,
+  "fps": 24.0,
+  "videoDuration": 7.916666666666667,
+  "seam": {
+    "fullMAE": 36.71331024169922,
+    "roadMAE": 16.33664894104004
+  },
+  "adjacentMedian": {
+    "fullMAE": 14.101154327392578,
+    "roadMAE": 5.619960784912109
+  },
+  "bestTrim": {
+    "startFrame": 17,
+    "lastFrame": 176,
+    "duration": 6.666666666666667,
+    "fullMAE": 30.80156898498535,
+    "roadMAE": 5.907802104949951
+  },
+  "flow": [
+    {
+      "time": 0.0,
+      "medianK": 4.174428462982178,
+      "medianDownPixelsPerSecond": 178.16650390625,
+      "tracks": 68
+    },
+    {
+      "time": 0.125,
+      "medianK": 3.9602549076080322,
+      "medianDownPixelsPerSecond": 184.376220703125,
+      "tracks": 64
+    },
+    {
+      "time": 0.25,
+      "medianK": 4.022076606750488,
+      "medianDownPixelsPerSecond": 128.173095703125,
+      "tracks": 45
+    },
+    {
+      "time": 0.375,
+      "medianK": 3.914168357849121,
+      "medianDownPixelsPerSecond": 139.3558349609375,
+      "tracks": 52
+    },
+    {
+      "time": 0.5,
+      "medianK": 4.487513542175293,
+      "medianDownPixelsPerSecond": 94.157958984375,
+      "tracks": 34
+    },
+    {
+      "time": 0.625,
+      "medianK": 4.2315874099731445,
+      "medianDownPixelsPerSecond": 101.50537109375,
+      "tracks": 47
+    },
+    {
+      "time": 0.75,
+      "medianK": 4.3259782791137695,
+      "medianDownPixelsPerSecond": 123.576904296875,
+      "tracks": 45
+    },
+    {
+      "time": 0.875,
+      "medianK": 4.840619087219238,
+      "medianDownPixelsPerSecond": 207.5550537109375,
+      "tracks": 58
+    },
+    {
+      "time": 1.0,
+      "medianK": 4.578485012054443,
+      "medianDownPixelsPerSecond": 143.91650390625,
+      "tracks": 55
+    },
+    {
+      "time": 1.125,
+      "medianK": 4.127562522888184,
+      "medianDownPixelsPerSecond": 139.56787109375,
+      "tracks": 65
+    },
+    {
+      "time": 1.25,
+      "medianK": 4.392580509185791,
+      "medianDownPixelsPerSecond": 185.2435302734375,
+      "tracks": 58
+    },
+    {
+      "time": 1.375,
+      "medianK": 4.566341876983643,
+      "medianDownPixelsPerSecond": 283.17138671875,
+      "tracks": 59
+    },
+    {
+      "time": 1.5,
+      "medianK": 4.643314838409424,
+      "medianDownPixelsPerSecond": 116.029052734375,
+      "tracks": 37
+    },
+    {
+      "time": 1.625,
+      "medianK": 3.6413440704345703,
+      "medianDownPixelsPerSecond": 107.66748046875,
+      "tracks": 62
+    },
+    {
+      "time": 1.75,
+      "medianK": 4.109683513641357,
+      "medianDownPixelsPerSecond": 150.10107421875,
+      "tracks": 71
+    },
+    {
+      "time": 1.875,
+      "medianK": 4.278134346008301,
+      "medianDownPixelsPerSecond": 221.5111083984375,
+      "tracks": 70
+    },
+    {
+      "time": 2.0,
+      "medianK": 4.712640285491943,
+      "medianDownPixelsPerSecond": 213.87353515625,
+      "tracks": 61
+    },
+    {
+      "time": 2.125,
+      "medianK": 4.437023639678955,
+      "medianDownPixelsPerSecond": 95.5831298828125,
+      "tracks": 48
+    },
+    {
+      "time": 2.25,
+      "medianK": 4.239206314086914,
+      "medianDownPixelsPerSecond": 106.1988525390625,
+      "tracks": 48
+    },
+    {
+      "time": 2.375,
+      "medianK": 4.326336860656738,
+      "medianDownPixelsPerSecond": 112.50634765625,
+      "tracks": 52
+    },
+    {
+      "time": 2.5,
+      "medianK": 4.2637786865234375,
+      "medianDownPixelsPerSecond": 155.467529296875,
+      "tracks": 66
+    },
+    {
+      "time": 2.625,
+      "medianK": 4.505579471588135,
+      "medianDownPixelsPerSecond": 128.943359375,
+      "tracks": 43
+    },
+    {
+      "time": 2.75,
+      "medianK": 4.259742736816406,
+      "medianDownPixelsPerSecond": 108.6435546875,
+      "tracks": 56
+    },
+    {
+      "time": 2.875,
+      "medianK": 4.346475124359131,
+      "medianDownPixelsPerSecond": 200.327880859375,
+      "tracks": 65
+    },
+    {
+      "time": 3.0,
+      "medianK": 4.7288947105407715,
+      "medianDownPixelsPerSecond": 205.175537109375,
+      "tracks": 49
+    },
+    {
+      "time": 3.125,
+      "medianK": 4.027573585510254,
+      "medianDownPixelsPerSecond": 117.01220703125,
+      "tracks": 65
+    },
+    {
+      "time": 3.25,
+      "medianK": 4.247512340545654,
+      "medianDownPixelsPerSecond": 159.707763671875,
+      "tracks": 51
+    },
+    {
+      "time": 3.375,
+      "medianK": 4.270451545715332,
+      "medianDownPixelsPerSecond": 206.05810546875,
+      "tracks": 63
+    },
+    {
+      "time": 3.5,
+      "medianK": 4.06580924987793,
+      "medianDownPixelsPerSecond": 173.8314208984375,
+      "tracks": 56
+    },
+    {
+      "time": 3.625,
+      "medianK": 4.477874755859375,
+      "medianDownPixelsPerSecond": 87.70751953125,
+      "tracks": 32
+    },
+    {
+      "time": 3.75,
+      "medianK": 3.9849510192871094,
+      "medianDownPixelsPerSecond": 127.426025390625,
+      "tracks": 49
+    },
+    {
+      "time": 3.875,
+      "medianK": 4.274464130401611,
+      "medianDownPixelsPerSecond": 81.9456787109375,
+      "tracks": 46
+    },
+    {
+      "time": 4.0,
+      "medianK": 4.279177188873291,
+      "medianDownPixelsPerSecond": 155.0076904296875,
+      "tracks": 54
+    },
+    {
+      "time": 4.125,
+      "medianK": 4.379910469055176,
+      "medianDownPixelsPerSecond": 127.066162109375,
+      "tracks": 45
+    },
+    {
+      "time": 4.25,
+      "medianK": 4.0292649269104,
+      "medianDownPixelsPerSecond": 108.65771484375,
+      "tracks": 71
+    },
+    {
+      "time": 4.375,
+      "medianK": 4.160078048706055,
+      "medianDownPixelsPerSecond": 180.442626953125,
+      "tracks": 79
+    },
+    {
+      "time": 4.5,
+      "medianK": 4.5290093421936035,
+      "medianDownPixelsPerSecond": 124.14404296875,
+      "tracks": 45
+    },
+    {
+      "time": 4.625,
+      "medianK": 4.348845958709717,
+      "medianDownPixelsPerSecond": 164.523681640625,
+      "tracks": 55
+    },
+    {
+      "time": 4.75,
+      "medianK": 4.608342170715332,
+      "medianDownPixelsPerSecond": 175.75341796875,
+      "tracks": 55
+    },
+    {
+      "time": 4.875,
+      "medianK": 4.306544303894043,
+      "medianDownPixelsPerSecond": 59.7919921875,
+      "tracks": 55
+    },
+    {
+      "time": 5.0,
+      "medianK": 4.575530529022217,
+      "medianDownPixelsPerSecond": 159.684326171875,
+      "tracks": 64
+    },
+    {
+      "time": 5.125,
+      "medianK": 4.380159378051758,
+      "medianDownPixelsPerSecond": 201.3603515625,
+      "tracks": 71
+    },
+    {
+      "time": 5.25,
+      "medianK": 4.567256450653076,
+      "medianDownPixelsPerSecond": 185.7197265625,
+      "tracks": 52
+    },
+    {
+      "time": 5.375,
+      "medianK": 4.388727188110352,
+      "medianDownPixelsPerSecond": 146.5205078125,
+      "tracks": 51
+    },
+    {
+      "time": 5.5,
+      "medianK": 4.503576278686523,
+      "medianDownPixelsPerSecond": 192.5777587890625,
+      "tracks": 66
+    },
+    {
+      "time": 5.625,
+      "medianK": 4.553315162658691,
+      "medianDownPixelsPerSecond": 180.424072265625,
+      "tracks": 59
+    },
+    {
+      "time": 5.75,
+      "medianK": 4.7095255851745605,
+      "medianDownPixelsPerSecond": 222.44775390625,
+      "tracks": 56
+    },
+    {
+      "time": 5.875,
+      "medianK": 4.553106307983398,
+      "medianDownPixelsPerSecond": 172.7117919921875,
+      "tracks": 52
+    },
+    {
+      "time": 6.0,
+      "medianK": 4.51356315612793,
+      "medianDownPixelsPerSecond": 133.63623046875,
+      "tracks": 53
+    },
+    {
+      "time": 6.125,
+      "medianK": 4.099065780639648,
+      "medianDownPixelsPerSecond": 132.7490234375,
+      "tracks": 74
+    },
+    {
+      "time": 6.25,
+      "medianK": 4.356807231903076,
+      "medianDownPixelsPerSecond": 183.21826171875,
+      "tracks": 61
+    },
+    {
+      "time": 6.375,
+      "medianK": 4.245230197906494,
+      "medianDownPixelsPerSecond": 88.650390625,
+      "tracks": 53
+    },
+    {
+      "time": 6.5,
+      "medianK": 4.3495354652404785,
+      "medianDownPixelsPerSecond": 118.68603515625,
+      "tracks": 61
+    },
+    {
+      "time": 6.625,
+      "medianK": 4.2610764503479,
+      "medianDownPixelsPerSecond": 162.60302734375,
+      "tracks": 61
+    },
+    {
+      "time": 6.75,
+      "medianK": 4.574877738952637,
+      "medianDownPixelsPerSecond": 148.955078125,
+      "tracks": 65
+    },
+    {
+      "time": 6.875,
+      "medianK": 4.6616411209106445,
+      "medianDownPixelsPerSecond": 148.818115234375,
+      "tracks": 57
+    },
+    {
+      "time": 7.0,
+      "medianK": 4.546692371368408,
+      "medianDownPixelsPerSecond": 208.4794921875,
+      "tracks": 71
+    },
+    {
+      "time": 7.125,
+      "medianK": 4.938848972320557,
+      "medianDownPixelsPerSecond": 98.30743408203125,
+      "tracks": 30
+    },
+    {
+      "time": 7.25,
+      "medianK": 4.221040725708008,
+      "medianDownPixelsPerSecond": 104.98907470703125,
+      "tracks": 42
+    },
+    {
+      "time": 7.375,
+      "medianK": 4.25048828125,
+      "medianDownPixelsPerSecond": 179.625732421875,
+      "tracks": 55
+    },
+    {
+      "time": 7.5,
+      "medianK": 4.718084812164307,
+      "medianDownPixelsPerSecond": 220.738525390625,
+      "tracks": 79
+    },
+    {
+      "time": 7.625,
+      "medianK": 4.551976203918457,
+      "medianDownPixelsPerSecond": 138.961669921875,
+      "tracks": 49
+    },
+    {
+      "time": 7.75,
+      "medianK": 3.7113311290740967,
+      "medianDownPixelsPerSecond": 195.076904296875,
+      "tracks": 85
+    }
+  ],
+  "focusOfExpansion": [
+    {
+      "time": 0.0,
+      "x": 0.49701961874961853,
+      "y": 0.40570691227912903,
+      "tracks": 68
+    },
+    {
+      "time": 0.125,
+      "x": 0.49510470032691956,
+      "y": 0.40733349323272705,
+      "tracks": 64
+    },
+    {
+      "time": 0.25,
+      "x": 0.505709171295166,
+      "y": 0.40669089555740356,
+      "tracks": 45
+    },
+    {
+      "time": 0.375,
+      "x": 0.49852079153060913,
+      "y": 0.3951364755630493,
+      "tracks": 52
+    },
+    {
+      "time": 0.5,
+      "x": 0.4989999830722809,
+      "y": 0.40147170424461365,
+      "tracks": 34
+    },
+    {
+      "time": 0.625,
+      "x": 0.4964268207550049,
+      "y": 0.4105605185031891,
+      "tracks": 47
+    },
+    {
+      "time": 0.75,
+      "x": 0.500791609287262,
+      "y": 0.4069536030292511,
+      "tracks": 45
+    },
+    {
+      "time": 0.875,
+      "x": 0.4979735314846039,
+      "y": 0.39902302622795105,
+      "tracks": 58
+    },
+    {
+      "time": 1.0,
+      "x": 0.49810975790023804,
+      "y": 0.3987230956554413,
+      "tracks": 55
+    },
+    {
+      "time": 1.125,
+      "x": 0.49793559312820435,
+      "y": 0.39195704460144043,
+      "tracks": 65
+    },
+    {
+      "time": 1.25,
+      "x": 0.4958568513393402,
+      "y": 0.40790680050849915,
+      "tracks": 58
+    },
+    {
+      "time": 1.375,
+      "x": 0.4968554377555847,
+      "y": 0.41785478591918945,
+      "tracks": 59
+    },
+    {
+      "time": 1.5,
+      "x": 0.4997072219848633,
+      "y": 0.4110674560070038,
+      "tracks": 37
+    },
+    {
+      "time": 1.625,
+      "x": 0.5148020386695862,
+      "y": 0.4417317807674408,
+      "tracks": 62
+    },
+    {
+      "time": 1.75,
+      "x": 0.5000728964805603,
+      "y": 0.4148925244808197,
+      "tracks": 71
+    },
+    {
+      "time": 1.875,
+      "x": 0.49310770630836487,
+      "y": 0.40320807695388794,
+      "tracks": 70
+    },
+    {
+      "time": 2.0,
+      "x": 0.49929937720298767,
+      "y": 0.4057011008262634,
+      "tracks": 61
+    },
+    {
+      "time": 2.125,
+      "x": 0.4995728135108948,
+      "y": 0.4040633738040924,
+      "tracks": 48
+    },
+    {
+      "time": 2.25,
+      "x": 0.4996799826622009,
+      "y": 0.400442898273468,
+      "tracks": 48
+    },
+    {
+      "time": 2.375,
+      "x": 0.49546876549720764,
+      "y": 0.40166452527046204,
+      "tracks": 52
+    },
+    {
+      "time": 2.5,
+      "x": 0.49215227365493774,
+      "y": 0.42041534185409546,
+      "tracks": 66
+    },
+    {
+      "time": 2.625,
+      "x": 0.49858278036117554,
+      "y": 0.40840497612953186,
+      "tracks": 43
+    },
+    {
+      "time": 2.75,
+      "x": 0.4981229305267334,
+      "y": 0.40538835525512695,
+      "tracks": 56
+    },
+    {
+      "time": 2.875,
+      "x": 0.49885663390159607,
+      "y": 0.40515780448913574,
+      "tracks": 65
+    },
+    {
+      "time": 3.0,
+      "x": 0.5037654638290405,
+      "y": 0.3970463275909424,
+      "tracks": 49
+    },
+    {
+      "time": 3.125,
+      "x": 0.4985220432281494,
+      "y": 0.39988788962364197,
+      "tracks": 65
+    },
+    {
+      "time": 3.25,
+      "x": 0.5012661218643188,
+      "y": 0.39970868825912476,
+      "tracks": 51
+    },
+    {
+      "time": 3.375,
+      "x": 0.4913571774959564,
+      "y": 0.39898669719696045,
+      "tracks": 63
+    },
+    {
+      "time": 3.5,
+      "x": 0.5190705060958862,
+      "y": 0.6412043571472168,
+      "tracks": 56
+    },
+    {
+      "time": 3.625,
+      "x": 0.4988327622413635,
+      "y": 0.40555644035339355,
+      "tracks": 32
+    },
+    {
+      "time": 3.75,
+      "x": 0.5049264430999756,
+      "y": 0.42836490273475647,
+      "tracks": 49
+    },
+    {
+      "time": 3.875,
+      "x": 0.5010817050933838,
+      "y": 0.4007631838321686,
+      "tracks": 46
+    },
+    {
+      "time": 4.0,
+      "x": 0.5046144723892212,
+      "y": 0.4092671573162079,
+      "tracks": 54
+    },
+    {
+      "time": 4.125,
+      "x": 0.4979710578918457,
+      "y": 0.4144260883331299,
+      "tracks": 45
+    },
+    {
+      "time": 4.25,
+      "x": 0.4975070059299469,
+      "y": 0.40325719118118286,
+      "tracks": 71
+    },
+    {
+      "time": 4.375,
+      "x": 0.4805983603000641,
+      "y": 0.45721542835235596,
+      "tracks": 79
+    },
+    {
+      "time": 4.5,
+      "x": 0.5086772441864014,
+      "y": 0.5467280745506287,
+      "tracks": 45
+    },
+    {
+      "time": 4.625,
+      "x": 0.49913907051086426,
+      "y": 0.4061923027038574,
+      "tracks": 55
+    },
+    {
+      "time": 4.75,
+      "x": 0.5020008087158203,
+      "y": 0.40815597772598267,
+      "tracks": 55
+    },
+    {
+      "time": 4.875,
+      "x": 0.5024517774581909,
+      "y": 0.4110707938671112,
+      "tracks": 55
+    },
+    {
+      "time": 5.0,
+      "x": 0.4992945194244385,
+      "y": 0.39177030324935913,
+      "tracks": 64
+    },
+    {
+      "time": 5.125,
+      "x": 0.5183612108230591,
+      "y": 0.426861435174942,
+      "tracks": 71
+    },
+    {
+      "time": 5.25,
+      "x": 0.5115584135055542,
+      "y": 0.4243083894252777,
+      "tracks": 52
+    },
+    {
+      "time": 5.375,
+      "x": 0.48940569162368774,
+      "y": 0.4113936126232147,
+      "tracks": 51
+    },
+    {
+      "time": 5.5,
+      "x": 0.49629896879196167,
+      "y": 0.40496593713760376,
+      "tracks": 66
+    },
+    {
+      "time": 5.625,
+      "x": 0.5071142315864563,
+      "y": 0.431356817483902,
+      "tracks": 59
+    },
+    {
+      "time": 5.75,
+      "x": 0.49977201223373413,
+      "y": 0.42202264070510864,
+      "tracks": 56
+    },
+    {
+      "time": 5.875,
+      "x": 0.5059476494789124,
+      "y": 0.4177663028240204,
+      "tracks": 52
+    },
+    {
+      "time": 6.0,
+      "x": 0.49456125497817993,
+      "y": 0.39554986357688904,
+      "tracks": 53
+    },
+    {
+      "time": 6.125,
+      "x": 0.5005388855934143,
+      "y": 0.40923869609832764,
+      "tracks": 74
+    },
+    {
+      "time": 6.25,
+      "x": 0.5002042055130005,
+      "y": 0.4834822714328766,
+      "tracks": 61
+    },
+    {
+      "time": 6.375,
+      "x": 0.5021881461143494,
+      "y": 0.4016166627407074,
+      "tracks": 53
+    },
+    {
+      "time": 6.5,
+      "x": 0.49937835335731506,
+      "y": 0.4060235023498535,
+      "tracks": 61
+    },
+    {
+      "time": 6.625,
+      "x": 0.48651665449142456,
+      "y": 0.42473289370536804,
+      "tracks": 61
+    },
+    {
+      "time": 6.75,
+      "x": 0.49873194098472595,
+      "y": 0.3985271453857422,
+      "tracks": 65
+    },
+    {
+      "time": 6.875,
+      "x": 0.49691683053970337,
+      "y": 0.42005327343940735,
+      "tracks": 57
+    },
+    {
+      "time": 7.0,
+      "x": 0.4907386898994446,
+      "y": 0.4025513231754303,
+      "tracks": 71
+    },
+    {
+      "time": 7.125,
+      "x": 0.49711498618125916,
+      "y": 0.40118470788002014,
+      "tracks": 30
+    },
+    {
+      "time": 7.25,
+      "x": 0.4946458339691162,
+      "y": 0.4153186082839966,
+      "tracks": 42
+    },
+    {
+      "time": 7.375,
+      "x": 0.5001655220985413,
+      "y": 0.401231974363327,
+      "tracks": 55
+    },
+    {
+      "time": 7.5,
+      "x": 0.5057167410850525,
+      "y": 0.4158276319503784,
+      "tracks": 79
+    },
+    {
+      "time": 7.625,
+      "x": 0.497972309589386,
+      "y": 0.40276435017585754,
+      "tracks": 49
+    },
+    {
+      "time": 7.75,
+      "x": 0.5088450908660889,
+      "y": 0.43144574761390686,
+      "tracks": 85
+    }
+  ],
+  "limitations": "Pixel MAE is not perceptual seamlessness. Flow is a noisy image-space estimate, not real 3D calibration. Mask and horizon are provisional."
+}

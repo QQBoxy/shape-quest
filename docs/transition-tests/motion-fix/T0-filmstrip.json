@@ -1,0 +1,74 @@
+[
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 7.631099999999939,
+    "image": "T0-0.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 7.764399999999941,
+    "image": "T0-1.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 7.897599999999943,
+    "image": "T0-2.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 8.031099999999944,
+    "image": "T0-3.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 8.16439999999994,
+    "image": "T0-4.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 8.297599999999939,
+    "image": "T0-5.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 8.430999999999939,
+    "image": "T0-6.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 8.564399999999935,
+    "image": "T0-7.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 8.697699999999934,
+    "image": "T0-8.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 8.830899999999932,
+    "image": "T0-9.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 8.964399999999928,
+    "image": "T0-10.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 9.097599999999927,
+    "image": "T0-11.jpg"
+  }
+]

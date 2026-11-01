@@ -1,0 +1,74 @@
+[
+  {
+    "phase": "cover",
+    "coverage": 0.04175000000000182,
+    "wall": 9.024300000000114,
+    "image": "T5-0.jpg"
+  },
+  {
+    "phase": "cover",
+    "coverage": 0.37499999999999994,
+    "wall": 9.157600000000112,
+    "image": "T5-1.jpg"
+  },
+  {
+    "phase": "cover",
+    "coverage": 0.7082499999999982,
+    "wall": 9.290900000000109,
+    "image": "T5-2.jpg"
+  },
+  {
+    "phase": "waiting",
+    "coverage": 1,
+    "wall": 9.424300000000107,
+    "image": "T5-3.jpg"
+  },
+  {
+    "phase": "reveal",
+    "coverage": 0.7079999999999973,
+    "wall": 9.557700000000105,
+    "image": "T5-4.jpg"
+  },
+  {
+    "phase": "reveal",
+    "coverage": 0.37474999999999925,
+    "wall": 9.691000000000102,
+    "image": "T5-5.jpg"
+  },
+  {
+    "phase": "reveal",
+    "coverage": 0.04149999999999665,
+    "wall": 9.8243000000001,
+    "image": "T5-6.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 9.957600000000097,
+    "image": "T5-7.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 10.090900000000095,
+    "image": "T5-8.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 10.224300000000094,
+    "image": "T5-9.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 10.35760000000009,
+    "image": "T5-10.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 10.490900000000087,
+    "image": "T5-11.jpg"
+  }
+]

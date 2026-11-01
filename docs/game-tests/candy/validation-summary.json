@@ -1,0 +1,50 @@
+{
+  "unitTests": {
+    "files": 8,
+    "passed": 112
+  },
+  "build": "passed",
+  "typecheck": "passed",
+  "existingE2E": {
+    "passed": 29
+  },
+  "newSceneE2E": {
+    "passed": 2
+  },
+  "visibleBrowser120sGames": {
+    "lollipop": {
+      "wallSeconds": 131.116,
+      "loops": 15,
+      "frames": 2869,
+      "medianRenderFPS": 60,
+      "medianInferenceFPS": 14.992503748125774,
+      "medianInferenceMs": 26.30000000447035,
+      "maxFrameGapMs": 100.09999999999127,
+      "maxLoopGapMs": 100.09999999999127,
+      "fallbackFrames": 0,
+      "sourceChanges": 0,
+      "stalled": 0,
+      "result": "體感挑戰結束 · 2900 分\n成功 29 次 · 失敗 0 次 · 遊玩 120 秒",
+      "manualPausePassed": true,
+      "trackingRecoveryPassed": true
+    },
+    "gingerbread": {
+      "wallSeconds": 131.318,
+      "loops": 15,
+      "frames": 2866,
+      "medianRenderFPS": 60,
+      "medianInferenceFPS": 14.992503748125774,
+      "medianInferenceMs": 26.399999998509884,
+      "maxFrameGapMs": 102,
+      "maxLoopGapMs": 102,
+      "fallbackFrames": 0,
+      "sourceChanges": 0,
+      "stalled": 0,
+      "result": "體感挑戰結束 · 2900 分\n成功 29 次 · 失敗 0 次 · 遊玩 120 秒",
+      "manualPausePassed": true,
+      "trackingRecoveryPassed": true
+    }
+  },
+  "humanWebcamAcceptance": "not performed",
+  "mobileTabletTVCasting": "not performed"
+}

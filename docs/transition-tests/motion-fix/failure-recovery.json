@@ -1,0 +1,173 @@
+{
+  "mode": "T2",
+  "activeSeconds": 12.48949999999991,
+  "gameTime": 5.349500000000012,
+  "gamePhase": "playing",
+  "paused": false,
+  "transitionPhase": "idle",
+  "coverage": 0,
+  "duration": 0.8,
+  "strength": 0.8,
+  "blockedSeconds": 7.0832000000000095,
+  "endHeldSeconds": 0,
+  "obstacleInPreview": false,
+  "obstacleInJudgment": false,
+  "unsafeCoveredFrames": 0,
+  "missingFrameRenders": 0,
+  "waits": 3,
+  "stalled": 0,
+  "timeouts": 1,
+  "loops": 0,
+  "switches": [
+    {
+      "game": 5.016300000000007,
+      "wall": 5.473099999999918,
+      "mode": "T2",
+      "fullyCovered": true,
+      "source": "l03_candy_001.mp4"
+    },
+    {
+      "game": 5.016300000000007,
+      "wall": 11.389599999999918,
+      "mode": "T2",
+      "fullyCovered": true,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 336.20000000018626
+    }
+  ],
+  "fps": 50.92277513111051,
+  "rafMs": {
+    "count": 636,
+    "mean": 19.637578616352055,
+    "p50": 16.699999999999818,
+    "p95": 33.399999999999636,
+    "max": 49.900000000000546
+  },
+  "renderSubmitMs": {
+    "count": 636,
+    "mean": 0.08081761005981795,
+    "p50": 0.10000000009313226,
+    "p95": 0.20000000018626451,
+    "max": 1.7999999998137355
+  },
+  "decodeProcessingMs": {
+    "count": 239,
+    "mean": 124.66066945606694,
+    "p50": 84.2,
+    "p95": 250.2,
+    "max": 633.5
+  },
+  "mediaCallbackGapMs": {
+    "count": 126,
+    "mean": 41.66428571428571,
+    "p50": 49.89999999999998,
+    "p95": 66.69999999999982,
+    "max": 66.70000000000073
+  },
+  "video": {
+    "time": 0.840294,
+    "presentedMedia": 0.791667,
+    "presentedFrames": 150,
+    "paused": false,
+    "duration": 7.93,
+    "readyState": 4,
+    "seeking": false,
+    "ended": false,
+    "frameReady": false,
+    "hasFrame": true,
+    "decoded": 24,
+    "dropped": 0,
+    "source": "l03_candy_001_v2.mp4",
+    "loop": false
+  },
+  "score": 0,
+  "misses": 1,
+  "hearts": 999,
+  "events": [
+    {
+      "wall": 0,
+      "game": 0,
+      "media": 0,
+      "event": "start"
+    },
+    {
+      "wall": 0.023499999999906894,
+      "game": 0,
+      "media": 0.001659,
+      "event": "video waiting"
+    },
+    {
+      "wall": 2.9066999999999044,
+      "game": 2.849899999999997,
+      "media": 2.871652,
+      "event": "manual request"
+    },
+    {
+      "wall": 2.939999999999904,
+      "game": 2.883199999999997,
+      "media": 2.906504,
+      "event": "tracking pause"
+    },
+    {
+      "wall": 2.939999999999904,
+      "game": 2.883199999999997,
+      "media": 2.906513,
+      "event": "tracking recovered"
+    },
+    {
+      "wall": 5.089899999999914,
+      "game": 5.016300000000007,
+      "media": 5.060728,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 5.473099999999918,
+      "game": 5.016300000000007,
+      "media": 5.460458,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 5.473099999999918,
+      "game": 5.016300000000007,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 9.50639999999993,
+      "game": 5.016300000000007,
+      "media": 3.783839,
+      "event": "timeout：保留畫面／遊戲凍結，需重試"
+    },
+    {
+      "wall": 11.389599999999918,
+      "game": 5.016300000000007,
+      "media": 3.783877,
+      "event": "retry"
+    },
+    {
+      "wall": 11.389599999999918,
+      "game": 5.016300000000007,
+      "media": 3.783877,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 11.406199999999918,
+      "game": 5.016300000000007,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 11.72289999999992,
+      "game": 5.016300000000007,
+      "media": 0.098322,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 12.156299999999916,
+      "game": 5.016300000000007,
+      "media": 0.496696,
+      "event": "reveal done"
+    }
+  ],
+  "scope": "Desktop background PoC; render submission excludes full GPU cost; no MediaPipe, mobile, tablet or TV validation; visual naturalness requires review"
+}

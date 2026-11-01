@@ -1,0 +1,74 @@
+[
+  {
+    "phase": "cover",
+    "coverage": 0.04150000000000091,
+    "wall": 9.024800000000075,
+    "image": "T4-0.jpg"
+  },
+  {
+    "phase": "cover",
+    "coverage": 0.37499999999999994,
+    "wall": 9.158200000000074,
+    "image": "T4-1.jpg"
+  },
+  {
+    "phase": "cover",
+    "coverage": 0.7082500000000027,
+    "wall": 9.291500000000074,
+    "image": "T4-2.jpg"
+  },
+  {
+    "phase": "waiting",
+    "coverage": 1,
+    "wall": 9.42480000000007,
+    "image": "T4-3.jpg"
+  },
+  {
+    "phase": "reveal",
+    "coverage": 0.9582500000000027,
+    "wall": 9.558200000000067,
+    "image": "T4-4.jpg"
+  },
+  {
+    "phase": "reveal",
+    "coverage": 0.625,
+    "wall": 9.691500000000067,
+    "image": "T4-5.jpg"
+  },
+  {
+    "phase": "reveal",
+    "coverage": 0.29175000000000173,
+    "wall": 9.824800000000065,
+    "image": "T4-6.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 9.958100000000062,
+    "image": "T4-7.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 10.09150000000006,
+    "image": "T4-8.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 10.224800000000059,
+    "image": "T4-9.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 10.358200000000055,
+    "image": "T4-10.jpg"
+  },
+  {
+    "phase": "idle",
+    "coverage": 0,
+    "wall": 10.491500000000054,
+    "image": "T4-11.jpg"
+  }
+]

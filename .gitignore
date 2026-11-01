@@ -1,0 +1,10 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+public/wasm/
+public/models/*.task
+.DS_Store
+test-results-video/
+test-results-hybrid/
+test-results-transition/

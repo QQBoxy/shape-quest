@@ -1,0 +1,170 @@
+{
+  "mode": "T2",
+  "activeSeconds": 12.37449999999981,
+  "gameTime": 5.424699999999825,
+  "gamePhase": "playing",
+  "paused": false,
+  "transitionPhase": "idle",
+  "coverage": 0,
+  "duration": 0.8,
+  "strength": 0.8,
+  "blockedSeconds": 6.949800000000017,
+  "endHeldSeconds": 0,
+  "obstacleInPreview": false,
+  "obstacleInJudgment": false,
+  "unsafeCoveredFrames": 0,
+  "missingFrameRenders": 0,
+  "waits": 3,
+  "stalled": 0,
+  "timeouts": 1,
+  "loops": 0,
+  "switches": [
+    {
+      "game": 5.00809999999982,
+      "wall": 5.408099999999826,
+      "mode": "T2",
+      "fullyCovered": true,
+      "source": "l03_candy_001.mp4"
+    },
+    {
+      "game": 5.00809999999982,
+      "wall": 11.257899999999827,
+      "mode": "T2",
+      "fullyCovered": true,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 267
+    }
+  ],
+  "fps": 51.39601600064726,
+  "rafMs": {
+    "count": 636,
+    "mean": 19.456761006289018,
+    "p50": 16.699999999999818,
+    "p95": 33.399999999999636,
+    "max": 50.100000000000364
+  },
+  "renderSubmitMs": {
+    "count": 636,
+    "mean": 0.07751572327380825,
+    "p50": 0.10000000009313226,
+    "p95": 0.20000000018626451,
+    "max": 2
+  },
+  "decodeProcessingMs": {
+    "count": 221,
+    "mean": 130.07828054298642,
+    "p50": 84.1,
+    "p95": 251.6,
+    "max": 633.3
+  },
+  "mediaCallbackGapMs": {
+    "count": 126,
+    "mean": 41.53174603174603,
+    "p50": 33.400000000000546,
+    "p95": 66.60000000000036,
+    "max": 66.80000000000018
+  },
+  "video": {
+    "time": 0.465543,
+    "duration": 7.93,
+    "readyState": 4,
+    "seeking": false,
+    "ended": false,
+    "frameReady": false,
+    "hasFrame": true,
+    "decoded": 15,
+    "dropped": 0,
+    "source": "l03_candy_001_v2.mp4",
+    "loop": false
+  },
+  "score": 0,
+  "misses": 1,
+  "hearts": 999,
+  "events": [
+    {
+      "wall": 0,
+      "game": 0,
+      "media": 0,
+      "event": "start"
+    },
+    {
+      "wall": 0.008299999999813736,
+      "game": 0.008299999999813736,
+      "media": 0.014614,
+      "event": "video waiting"
+    },
+    {
+      "wall": 2.9081999999998107,
+      "game": 2.9081999999998107,
+      "media": 2.873287,
+      "event": "manual request"
+    },
+    {
+      "wall": 2.9414999999998104,
+      "game": 2.9414999999998104,
+      "media": 2.906726,
+      "event": "tracking pause"
+    },
+    {
+      "wall": 2.9414999999998104,
+      "game": 2.9414999999998104,
+      "media": 2.906752,
+      "event": "tracking recovered"
+    },
+    {
+      "wall": 5.0247999999998205,
+      "game": 5.00809999999982,
+      "media": 4.996604,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 5.408099999999826,
+      "game": 5.00809999999982,
+      "media": 4.996635,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 5.408099999999826,
+      "game": 5.00809999999982,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 9.441299999999837,
+      "game": 5.00809999999982,
+      "media": 3.787032,
+      "event": "timeout：保留畫面／遊戲凍結，需重試"
+    },
+    {
+      "wall": 11.257899999999827,
+      "game": 5.00809999999982,
+      "media": 3.787045,
+      "event": "retry"
+    },
+    {
+      "wall": 11.257899999999827,
+      "game": 5.00809999999982,
+      "media": 3.787045,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 11.291199999999826,
+      "game": 5.00809999999982,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 11.524499999999822,
+      "game": 5.00809999999982,
+      "media": 0.026933,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 11.957899999999814,
+      "game": 5.00809999999982,
+      "media": 0.026995,
+      "event": "reveal done"
+    }
+  ],
+  "scope": "Desktop background PoC; render submission excludes full GPU cost; no MediaPipe, mobile, tablet or TV validation; visual naturalness requires review"
+}

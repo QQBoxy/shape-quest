@@ -1,0 +1,587 @@
+{
+  "mode": "T1",
+  "activeSeconds": 120.37100000001345,
+  "gameTime": 109.42110000001142,
+  "gamePhase": "playing",
+  "paused": true,
+  "transitionPhase": "idle",
+  "coverage": 0,
+  "duration": 0.8,
+  "strength": 0.8,
+  "blockedSeconds": 10.949900000000026,
+  "endHeldSeconds": 1.5994999999999773,
+  "obstacleInPreview": false,
+  "obstacleInJudgment": false,
+  "unsafeCoveredFrames": 0,
+  "missingFrameRenders": 0,
+  "waits": 14,
+  "stalled": 0,
+  "timeouts": 0,
+  "loops": 0,
+  "switches": [
+    {
+      "game": 9.008799999999836,
+      "wall": 9.42549999999983,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 35
+    },
+    {
+      "game": 17.00839999999966,
+      "wall": 18.25849999999964,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 34.9000000001397
+    },
+    {
+      "game": 25.008099999999466,
+      "wall": 27.124799999999407,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 34.800000000046566
+    },
+    {
+      "game": 33.00769999999938,
+      "wall": 35.97439999999954,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 33.4000000001397
+    },
+    {
+      "game": 41.00729999999987,
+      "wall": 44.80740000000008,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 34.89999999990687
+    },
+    {
+      "game": 49.00690000000038,
+      "wall": 53.64040000000065,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 34.5999999998603
+    },
+    {
+      "game": 57.00650000000091,
+      "wall": 62.49000000000123,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 34.0999999998603
+    },
+    {
+      "game": 65.00620000000164,
+      "wall": 71.32300000000264,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 34.299999999813735
+    },
+    {
+      "game": 73.00590000000344,
+      "wall": 80.15600000000462,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 35
+    },
+    {
+      "game": 81.00560000000516,
+      "wall": 88.98900000000653,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 34.9000000001397
+    },
+    {
+      "game": 89.00540000000692,
+      "wall": 97.82200000000847,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 34.800000000046566
+    },
+    {
+      "game": 97.00500000000866,
+      "wall": 106.67160000001043,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 34.5
+    },
+    {
+      "game": 105.00460000001044,
+      "wall": 115.50460000001237,
+      "mode": "T1",
+      "fullyCovered": false,
+      "source": "l03_candy_001_v2.mp4",
+      "waitMs": 33.5999999998603
+    }
+  ],
+  "fps": 59.9978400112985,
+  "rafMs": {
+    "count": 7222,
+    "mean": 16.667266685128748,
+    "p50": 16.69999999999709,
+    "p95": 16.70000000001164,
+    "max": 33.29999999999998
+  },
+  "renderSubmitMs": {
+    "count": 7222,
+    "mean": 0.07154527831579809,
+    "p50": 0.09999999986030161,
+    "p95": 0.19999999995343387,
+    "max": 1.3000000000465661
+  },
+  "decodeProcessingMs": {
+    "count": 2575,
+    "mean": 126.9786019417471,
+    "p50": 84.9,
+    "p95": 250.8,
+    "max": 597.9
+  },
+  "mediaCallbackGapMs": {
+    "count": 2548,
+    "mean": 41.66499215070643,
+    "p50": 33.40000000000873,
+    "p95": 66.69999999999709,
+    "max": 66.80000000000291
+  },
+  "video": {
+    "time": 4.402958,
+    "duration": 7.93,
+    "readyState": 4,
+    "seeking": false,
+    "ended": false,
+    "frameReady": false,
+    "hasFrame": true,
+    "decoded": 2580,
+    "dropped": 0,
+    "source": "l03_candy_001_v2.mp4",
+    "loop": false
+  },
+  "score": 0,
+  "misses": 27,
+  "hearts": 973,
+  "events": [
+    {
+      "wall": 0,
+      "game": 0,
+      "media": 0,
+      "event": "start"
+    },
+    {
+      "wall": 0.04249999999981372,
+      "game": 0.04249999999981372,
+      "media": 0.014326,
+      "event": "video waiting"
+    },
+    {
+      "wall": 9.025499999999836,
+      "game": 9.008799999999836,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 9.42549999999983,
+      "game": 9.008799999999836,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 9.42549999999983,
+      "game": 9.008799999999836,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 9.44219999999983,
+      "game": 9.008799999999836,
+      "media": 0.007415,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 9.858799999999826,
+      "game": 9.008799999999836,
+      "media": 0.007479,
+      "event": "reveal done"
+    },
+    {
+      "wall": 17.875099999999648,
+      "game": 17.00839999999966,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 18.25849999999964,
+      "game": 17.00839999999966,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 18.25849999999964,
+      "game": 17.00839999999966,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 18.275099999999636,
+      "game": 17.00839999999966,
+      "media": 0.007372,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 18.70839999999962,
+      "game": 17.00839999999966,
+      "media": 0.007424,
+      "event": "reveal done"
+    },
+    {
+      "wall": 26.724799999999426,
+      "game": 25.008099999999466,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 27.124799999999407,
+      "game": 25.008099999999466,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 27.124799999999407,
+      "game": 25.008099999999466,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 27.141399999999404,
+      "game": 25.008099999999466,
+      "media": 0.006729,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 27.574799999999406,
+      "game": 25.008099999999466,
+      "media": 0.006767,
+      "event": "reveal done"
+    },
+    {
+      "wall": 35.59109999999953,
+      "game": 33.00769999999938,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 35.97439999999954,
+      "game": 33.00769999999938,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 35.97439999999954,
+      "game": 33.00769999999938,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 35.99109999999955,
+      "game": 33.00769999999938,
+      "media": 0.005063,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 36.40769999999957,
+      "game": 33.00769999999938,
+      "media": 0.005105,
+      "event": "reveal done"
+    },
+    {
+      "wall": 44.42410000000007,
+      "game": 41.00729999999987,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 44.80740000000008,
+      "game": 41.00729999999987,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 44.80740000000008,
+      "game": 41.00729999999987,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 44.82410000000009,
+      "game": 41.00729999999987,
+      "media": 0.006939,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 45.24070000000011,
+      "game": 41.00729999999987,
+      "media": 0.006982,
+      "event": "reveal done"
+    },
+    {
+      "wall": 53.257000000000616,
+      "game": 49.00690000000038,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 53.64040000000065,
+      "game": 49.00690000000038,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 53.64040000000065,
+      "game": 49.00690000000038,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 53.65700000000065,
+      "game": 49.00690000000038,
+      "media": 0.006716,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 54.09040000000067,
+      "game": 49.00690000000038,
+      "media": 0.006752,
+      "event": "reveal done"
+    },
+    {
+      "wall": 62.10670000000121,
+      "game": 57.00650000000091,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 62.49000000000123,
+      "game": 57.00650000000091,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 62.49000000000123,
+      "game": 57.00650000000091,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 62.50670000000124,
+      "game": 57.00650000000091,
+      "media": 0.005686,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 62.92330000000127,
+      "game": 57.00650000000091,
+      "media": 0.005721,
+      "event": "reveal done"
+    },
+    {
+      "wall": 70.93970000000255,
+      "game": 65.00620000000164,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 71.32300000000264,
+      "game": 65.00620000000164,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 71.32300000000264,
+      "game": 65.00620000000164,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 71.33970000000264,
+      "game": 65.00620000000164,
+      "media": 0.00643,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 71.75630000000274,
+      "game": 65.00620000000164,
+      "media": 0.006476,
+      "event": "reveal done"
+    },
+    {
+      "wall": 79.77260000000454,
+      "game": 73.00590000000344,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 80.15600000000462,
+      "game": 73.00590000000344,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 80.15600000000462,
+      "game": 73.00590000000344,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 80.17270000000462,
+      "game": 73.00590000000344,
+      "media": 0.005705,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 80.58930000000473,
+      "game": 73.00590000000344,
+      "media": 0.005751,
+      "event": "reveal done"
+    },
+    {
+      "wall": 88.60560000000646,
+      "game": 81.00560000000516,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 88.98900000000653,
+      "game": 81.00560000000516,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 88.98900000000653,
+      "game": 81.00560000000516,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 89.00560000000654,
+      "game": 81.00560000000516,
+      "media": 0.00736,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 89.42220000000663,
+      "game": 81.00560000000516,
+      "media": 0.007398,
+      "event": "reveal done"
+    },
+    {
+      "wall": 97.43860000000839,
+      "game": 89.00540000000692,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 97.82200000000847,
+      "game": 89.00540000000692,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 97.82200000000847,
+      "game": 89.00540000000692,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 97.83860000000848,
+      "game": 89.00540000000692,
+      "media": 0.006299,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 98.27190000000859,
+      "game": 89.00540000000692,
+      "media": 0.006347,
+      "event": "reveal done"
+    },
+    {
+      "wall": 106.28820000001033,
+      "game": 97.00500000000866,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 106.67160000001043,
+      "game": 97.00500000000866,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 106.67160000001043,
+      "game": 97.00500000000866,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 106.68830000001043,
+      "game": 97.00500000000866,
+      "media": 0.006222,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 107.10490000001052,
+      "game": 97.00500000000866,
+      "media": 0.00627,
+      "event": "reveal done"
+    },
+    {
+      "wall": 115.1212000000123,
+      "game": 105.00460000001044,
+      "media": 7.93,
+      "event": "安全空檔：凍結 Game Clock 與既有排程"
+    },
+    {
+      "wall": 115.50460000001237,
+      "game": 105.00460000001044,
+      "media": 7.93,
+      "event": "switch：完全遮蔽／T1 僅減低注意"
+    },
+    {
+      "wall": 115.50460000001237,
+      "game": 105.00460000001044,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 115.52120000001237,
+      "game": 105.00460000001044,
+      "media": 0.005155,
+      "event": "有效新影格已提交"
+    },
+    {
+      "wall": 115.95450000001247,
+      "game": 105.00460000001044,
+      "media": 0.005195,
+      "event": "reveal done"
+    },
+    {
+      "wall": 120.37100000001345,
+      "game": 109.42110000001142,
+      "media": 4.402949,
+      "event": "manual pause"
+    }
+  ],
+  "scope": "Desktop background PoC; render submission excludes full GPU cost; no MediaPipe, mobile, tablet or TV validation; visual naturalness requires review",
+  "testedAt": "2026-11-01T01:43:07.088Z",
+  "environment": "macOS arm64 Playwright Chromium; one serial page; real elapsed time; no MediaPipe; no device or TV tests",
+  "errors": [],
+  "note": "First-transition JPEG filmstrip sampling adds diagnostic overhead. No automatic visual-naturalness verdict."
+}

@@ -1,0 +1,263 @@
+{
+  "mode": "T0",
+  "activeSeconds": 120.1099000000138,
+  "gameTime": 120.11190000001389,
+  "gamePhase": "playing",
+  "paused": true,
+  "transitionPhase": "idle",
+  "coverage": 0,
+  "duration": 0.8,
+  "strength": 0.8,
+  "blockedSeconds": 0,
+  "endHeldSeconds": 0,
+  "obstacleInPreview": true,
+  "obstacleInJudgment": false,
+  "unsafeCoveredFrames": 0,
+  "missingFrameRenders": 0,
+  "waits": 15,
+  "stalled": 0,
+  "timeouts": 0,
+  "loops": 14,
+  "switches": [],
+  "fps": 60.00338023759911,
+  "rafMs": {
+    "count": 7207,
+    "mean": 16.66572776467322,
+    "p50": 16.69999999999709,
+    "p95": 16.79999999998836,
+    "max": 33.299999999999955
+  },
+  "renderSubmitMs": {
+    "count": 7207,
+    "mean": 0.07026502011905705,
+    "p50": 0.10000000009313226,
+    "p95": 0.19999999972060323,
+    "max": 1.900000000372529
+  },
+  "decodeProcessingMs": {
+    "count": 2839,
+    "mean": 121.54607256075994,
+    "p50": 84.1,
+    "p95": 250.2,
+    "max": 300
+  },
+  "mediaCallbackGapMs": {
+    "count": 2838,
+    "mean": 42.29337561663143,
+    "p50": 49.89999999999418,
+    "p95": 66.69999999999709,
+    "max": 216.59999999999854
+  },
+  "video": {
+    "time": 7.780844,
+    "presentedMedia": 7.75,
+    "presentedFrames": 2839,
+    "paused": true,
+    "duration": 7.93,
+    "readyState": 4,
+    "seeking": false,
+    "ended": false,
+    "frameReady": false,
+    "hasFrame": true,
+    "decoded": 2850,
+    "dropped": 0,
+    "source": "l03_candy_001_v2.mp4",
+    "loop": true
+  },
+  "score": 0,
+  "misses": 29,
+  "hearts": 971,
+  "events": [
+    {
+      "wall": 0,
+      "game": 0,
+      "media": 0,
+      "event": "start"
+    },
+    {
+      "wall": 0.03129999999990685,
+      "game": 0.033299999999999955,
+      "media": 0.016853,
+      "event": "video waiting"
+    },
+    {
+      "wall": 7.980999999999944,
+      "game": 7.983000000000037,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 7.997699999999943,
+      "game": 7.999700000000036,
+      "media": 0.002691,
+      "event": "native loop"
+    },
+    {
+      "wall": 15.980699999999814,
+      "game": 15.982699999999907,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 16.113999999999812,
+      "game": 16.115999999999907,
+      "media": 0.037423,
+      "event": "native loop"
+    },
+    {
+      "wall": 24.080399999999624,
+      "game": 24.08239999999972,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 24.11369999999962,
+      "game": 24.115699999999716,
+      "media": 0.004438,
+      "event": "native loop"
+    },
+    {
+      "wall": 32.096699999999444,
+      "game": 32.09869999999954,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 32.21339999999944,
+      "game": 32.21539999999953,
+      "media": 0.048668,
+      "event": "native loop"
+    },
+    {
+      "wall": 40.1130999999999,
+      "game": 40.1151,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 40.21309999999991,
+      "game": 40.21510000000001,
+      "media": 0.041392,
+      "event": "native loop"
+    },
+    {
+      "wall": 48.12940000000042,
+      "game": 48.13140000000052,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 48.14610000000042,
+      "game": 48.14810000000052,
+      "media": 0.004394,
+      "event": "native loop"
+    },
+    {
+      "wall": 56.1291000000009,
+      "game": 56.131100000001,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 56.229100000000905,
+      "game": 56.231100000001,
+      "media": 0.037558,
+      "event": "native loop"
+    },
+    {
+      "wall": 64.1455000000014,
+      "game": 64.1475000000015,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 64.1621000000014,
+      "game": 64.1641000000015,
+      "media": 0.00145,
+      "event": "native loop"
+    },
+    {
+      "wall": 72.14510000000297,
+      "game": 72.14710000000306,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 72.17840000000298,
+      "game": 72.18040000000308,
+      "media": 0.00688,
+      "event": "native loop"
+    },
+    {
+      "wall": 80.16140000000479,
+      "game": 80.16340000000488,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 80.26150000000482,
+      "game": 80.26350000000491,
+      "media": 0.041893,
+      "event": "native loop"
+    },
+    {
+      "wall": 88.1778000000066,
+      "game": 88.1798000000067,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 88.19450000000661,
+      "game": 88.19650000000671,
+      "media": 0.00249,
+      "event": "native loop"
+    },
+    {
+      "wall": 96.17750000000842,
+      "game": 96.17950000000852,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 96.29410000000844,
+      "game": 96.29610000000854,
+      "media": 0.053038,
+      "event": "native loop"
+    },
+    {
+      "wall": 104.19380000001019,
+      "game": 104.19580000001028,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 104.2105000000102,
+      "game": 104.2125000000103,
+      "media": 0.001325,
+      "event": "native loop"
+    },
+    {
+      "wall": 112.26020000001202,
+      "game": 112.26220000001211,
+      "media": 0,
+      "event": "video waiting"
+    },
+    {
+      "wall": 112.36020000001204,
+      "game": 112.36220000001214,
+      "media": 0.042,
+      "event": "native loop"
+    },
+    {
+      "wall": 120.1099000000138,
+      "game": 120.11190000001389,
+      "media": 7.780821,
+      "event": "manual pause"
+    }
+  ],
+  "scope": "Desktop background PoC; render submission excludes full GPU cost; no MediaPipe, mobile, tablet or TV validation; visual naturalness requires review",
+  "testedAt": "2026-11-01T02:08:20.465Z",
+  "environment": "macOS arm64 Playwright Chromium; one serial page; real elapsed time; no MediaPipe; no device or TV tests",
+  "errors": [],
+  "note": "First-transition JPEG filmstrip sampling adds diagnostic overhead. No automatic visual-naturalness verdict."
+}
