@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-for (const [scene, stem] of [["lollipop", "l03_candy_001_v2"], ["gingerbread", "l03_candy_002"]]) {
+for (const [scene, stem] of [["lollipop", "l03_candy_001_v2"], ["chocolate", "l03_candy_003"], ["gummy", "l03_candy_004"], ["cotton-candy", "l03_candy_005_v2"]]) {
   test(`${scene} is selected before a fixed 120-second game with the shared projection`, async ({ page }) => {
     const now = new Date("2026-11-01T00:00:00Z");
     await page.clock.install({ time: now });
@@ -10,7 +10,7 @@ for (const [scene, stem] of [["lollipop", "l03_candy_001_v2"], ["gingerbread", "
     const video = page.locator("#background");
     expect(await video.evaluate((v: HTMLVideoElement) => v.currentSrc)).toContain(`${stem}_original_xfade.mp4`);
     expect(await video.evaluate((v: HTMLVideoElement) => ({ rate: v.playbackRate, loop: v.loop, muted: v.muted }))).toEqual({ rate: 1, loop: true, muted: true });
-    await page.screenshot({ path: `docs/game-tests/candy/${scene}-home.png` });
+    await page.screenshot({ path: `docs/game-tests/cotton-candy-forest-v2/${scene}-home.png` });
     await page.locator("#menu-toggle").click();
     await page.locator(".menu-tools summary").click();
     await page.locator("#debug-toggle").click();
@@ -26,7 +26,7 @@ for (const [scene, stem] of [["lollipop", "l03_candy_001_v2"], ["gingerbread", "
     }
     await page.clock.runFor(200);
     await expect(page.locator("#score")).toHaveText("0400");
-    await page.screenshot({ path: `docs/game-tests/candy/${scene}-playing.png` });
+    await page.screenshot({ path: `docs/game-tests/cotton-candy-forest-v2/${scene}-playing.png` });
     await page.locator("#menu-toggle").click();
     const time = await page.locator("#timer").textContent();
     await page.clock.runFor(2000);

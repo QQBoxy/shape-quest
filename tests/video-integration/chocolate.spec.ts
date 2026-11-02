@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
-const output = "docs/video-tests/l03-candy-002";
-for (const scene of ["gingerbread", "lollipop"]) {
+for (const scene of ["chocolate", "lollipop", "gummy", "cotton-candy"]) {
+  const output = scene === "cotton-candy" ? "docs/video-tests/l03-candy-005-v2" : scene === "gummy" ? "docs/video-tests/l03-candy-004" : "docs/video-tests/l03-candy-003";
   test(`${scene}: 120 wall seconds, overlays and independent game clock`, async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", error => errors.push(error.message));

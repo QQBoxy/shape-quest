@@ -44,6 +44,15 @@
   height: 100% !important;
   aspect-ratio: 16/9;
 }
+.lab-stage #lab-held-frame {
+  z-index: 0;
+  pointer-events: none;
+}
+#lab-switches {
+  font-size: 11px;
+  white-space: pre-wrap;
+  line-height: 1.8;
+}
 .lab-time {
   position: absolute;
   top: 15px;

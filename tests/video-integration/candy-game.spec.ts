@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
 // Measure this local performance scenario in a visible browser, as for manual play.
 test.use({ headless: false });
-const output = "docs/game-tests/candy";
+const output = "docs/game-tests/chocolate-riverside";
 test.afterEach(async ({ page }, info) => {
   if (info.status === info.expectedStatus) return;
   const data = await page.evaluate(() => ({
@@ -20,7 +20,7 @@ test.afterEach(async ({ page }, info) => {
   }));
   await writeFile(`${output}/failure-${Date.now()}.json`, JSON.stringify({ test:info.title, ...data },null,2)+"\n");
 });
-for (const scene of ["lollipop", "gingerbread"]) {
+for (const scene of ["lollipop", "chocolate"]) {
   test(`${scene}: real 120-second game with real MediaPipe inference and synthetic body input`, async ({ page }) => {
     test.setTimeout(210000);
     const errors: string[] = [];

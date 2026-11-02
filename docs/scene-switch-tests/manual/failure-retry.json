@@ -1,0 +1,813 @@
+{
+  "switchPoC": true,
+  "switching": false,
+  "queuedScene": null,
+  "switchError": "",
+  "switches": [
+    {
+      "from": "chocolate",
+      "to": "gummy",
+      "requestedGameTime": 0.045900000001117575,
+      "waitMs": 9.200000001117587,
+      "loadMs": null,
+      "firstFrameMs": null,
+      "freezeMs": 7.799999998882413,
+      "status": "failed",
+      "before": {
+        "time": 0.0625000000011176,
+        "score": 0,
+        "health": 3000,
+        "successes": 0,
+        "misses": 0,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "pending"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "pending"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "pending"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "pending"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "pending"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "pending"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "error": "影片載入或解碼失敗",
+      "after": {
+        "time": 0.0625000000011176,
+        "score": 0,
+        "health": 3000,
+        "successes": 0,
+        "misses": 0,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "pending"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "pending"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "pending"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "pending"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "pending"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "pending"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "chocolate",
+      "to": "gummy",
+      "requestedGameTime": 0.0625000000011176,
+      "waitMs": 14.099999999627471,
+      "loadMs": 44.90000000037253,
+      "firstFrameMs": 50.5,
+      "freezeMs": 50.59999999962747,
+      "status": "passed",
+      "before": {
+        "time": 0.0625000000011176,
+        "score": 0,
+        "health": 3000,
+        "successes": 0,
+        "misses": 0,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "pending"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "pending"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "pending"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "pending"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "pending"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "pending"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 0.0625000000011176,
+        "score": 0,
+        "health": 3000,
+        "successes": 0,
+        "misses": 0,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "pending"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "pending"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "pending"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "pending"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "pending"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "pending"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    }
+  ],
+  "score": 0,
+  "health": 3000,
+  "roundDuration": 120,
+  "wallSeconds": 0.897,
+  "scene": "gummy",
+  "sceneLabel": "果凍軟糖城",
+  "gameOverlay": true,
+  "variant": "original-fade",
+  "file": "l03_candy_004_original_xfade.mp4",
+  "fadeSeconds": 0.3333333333333333,
+  "status": "candidate",
+  "targetSeconds": 120,
+  "activeSeconds": 0.04990000000000001,
+  "reached120": false,
+  "gameTime": 0.0625000000011176,
+  "gamePhase": "playing",
+  "successes": 0,
+  "misses": 0,
+  "videoTime": 0.0039,
+  "duration": 7.583333,
+  "paused": false,
+  "muted": true,
+  "playsInline": true,
+  "loop": true,
+  "rate": 1,
+  "profile": {
+    "centerX": 0.5,
+    "horizon": 0.41,
+    "nearHalfWidth": 0.64,
+    "focal": 0.85,
+    "speed": 5,
+    "near": 2
+  },
+  "frameCount": 0,
+  "maxFrameGapMs": 0,
+  "gapsOver250ms": 0,
+  "waiting": 0,
+  "waitingEvents": [],
+  "stalled": 0,
+  "droppedFrames": 0,
+  "totalFrames": 4,
+  "loops": [],
+  "samples": [
+    {
+      "wall": 0.04990000000000001,
+      "media": 0,
+      "game": 0.0625000000011176
+    }
+  ],
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+  "note": "Timing and pixel differences do not certify seamlessness or physical 3D alignment.",
+  "testedAt": "2026-11-02T04:26:56.771Z"
+}

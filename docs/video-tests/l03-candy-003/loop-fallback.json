@@ -1,0 +1,23 @@
+[
+  {
+    "scene": "chocolate",
+    "variant": "original-fade",
+    "frames": 572,
+    "loops": 1,
+    "fallbackFrames": []
+  },
+  {
+    "scene": "chocolate",
+    "variant": "original",
+    "frames": 571,
+    "loops": 1,
+    "fallbackFrames": []
+  },
+  {
+    "scene": "lollipop",
+    "variant": "original",
+    "frames": 571,
+    "loops": 1,
+    "fallbackFrames": []
+  }
+]

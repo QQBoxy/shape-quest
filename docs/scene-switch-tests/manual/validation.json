@@ -1,0 +1,55 @@
+{
+  "testedAt": "2026-11-02T04:30:31.800Z",
+  "mode": "manual-only",
+  "url": "?videoTest=1&sceneSwitch=1",
+  "buildPassed": true,
+  "unitTestsPassed": 112,
+  "relatedE2EUniquePassed": 11,
+  "initialE2ETimingFailure": "Manual key sampling initially missed the action window; reduced test polling interval to 25ms, no game rule changes; both PoC tests passed on rerun.",
+  "longTestPassed": true,
+  "gameSeconds": 120,
+  "wallSeconds": 120.403,
+  "displayProbe": {
+    "sampledFrames": 7199,
+    "heldFrames": 16,
+    "unavailableReadbacks": 26,
+    "blackFrames": 0,
+    "fallbackFrames": 0
+  },
+  "allSwitchStatesPreserved": true,
+  "switches": [
+    {
+      "from": "lollipop",
+      "to": "chocolate",
+      "waitMs": 2814.199999999255,
+      "loadMs": 47.100000001490116,
+      "firstFrameMs": 49.80000000074506,
+      "freezeMs": 49.90000000037253
+    },
+    {
+      "from": "chocolate",
+      "to": "gummy",
+      "waitMs": 764.2000000011176,
+      "loadMs": 45.19999999925494,
+      "firstFrameMs": 49,
+      "freezeMs": 49
+    },
+    {
+      "from": "gummy",
+      "to": "cotton-candy",
+      "waitMs": 2894.2000000011176,
+      "loadMs": 40.899999998509884,
+      "firstFrameMs": 84.19999999925494,
+      "freezeMs": 84.29999999888241
+    },
+    {
+      "from": "cotton-candy",
+      "to": "lollipop",
+      "waitMs": 728.4000000003725,
+      "loadMs": 42.5,
+      "firstFrameMs": 84,
+      "freezeMs": 84.09999999962747
+    }
+  ],
+  "limitations": "Single video with held-frame freeze; not continuous scenery motion, not official auto carousel, no human MediaPipe or mobile acceptance."
+}

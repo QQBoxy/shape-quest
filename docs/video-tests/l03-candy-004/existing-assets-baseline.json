@@ -1,0 +1,18 @@
+[
+  {
+    "path": "public/videos/level-03/l03_candy_001_v2.mp4",
+    "sha256": "0948748697b563a4723fbd63af0c9141b894bd7652eb24863cad4a82af4ee0d9"
+  },
+  {
+    "path": "public/videos/level-03/l03_candy_001_v2_original_xfade.mp4",
+    "sha256": "ff17f18435e0571c3a1ce982ebf60998fce4ff91faf5e5c0987e924992e3fe6b"
+  },
+  {
+    "path": "public/videos/level-03/l03_candy_003.mp4",
+    "sha256": "59005fb0cf5bff13d14159129bb6b5a4e864abbe5f0213c06d2c392bbd289e8b"
+  },
+  {
+    "path": "public/videos/level-03/l03_candy_003_original_xfade.mp4",
+    "sha256": "24dee7335ef59649d13bcd89549a8d01a4fef8de511042b79d03a0b2c920f853"
+  }
+]

@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
 test("native loop keeps the loaded video visible while the decoder seeks", async ({ page }) => {
-  test.setTimeout(60000);
+  test.setTimeout(110000);
   const reports = [];
-  for (const [scene, variant] of [["gingerbread", "original-fade"], ["gingerbread", "original"], ["lollipop", "original"]]) {
+  for (const [scene, variant] of [["cotton-candy", "original-fade"], ["cotton-candy", "original"], ["lollipop", "original-fade"], ["gummy", "original-fade"], ["gummy", "original"], ["chocolate", "original-fade"], ["chocolate", "original"], ["lollipop", "original"]]) {
     await page.goto(`./?videoTest=1&scene=${scene}&variant=${variant}`);
     await expect(page.locator("#lab-start")).toBeEnabled();
     await page.locator("#lab-start").click();
@@ -29,8 +29,8 @@ test("native loop keeps the loaded video visible while the decoder seeks", async
     }));
     reports.push({ scene, variant, ...result });
   }
-  await mkdir("docs/video-tests/l03-candy-002", { recursive: true });
-  await writeFile("docs/video-tests/l03-candy-002/loop-fallback.json", JSON.stringify(reports, null, 2) + "\n");
+  await mkdir("docs/video-tests/l03-candy-005-v2", { recursive: true });
+  await writeFile("docs/video-tests/l03-candy-005-v2/loop-fallback.json", JSON.stringify(reports, null, 2) + "\n");
   for (const result of reports) {
     expect(result.loops).toBeGreaterThanOrEqual(1);
     expect(result.fallbackFrames).toEqual([]);

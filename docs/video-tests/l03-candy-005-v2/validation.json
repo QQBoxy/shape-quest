@@ -1,0 +1,40 @@
+{
+  "testedAt": "2026-11-02T02:26:27.911Z",
+  "build": {
+    "command": "npm run build",
+    "passed": true
+  },
+  "unit": {
+    "command": "npm test",
+    "passed": 112
+  },
+  "relatedE2E": {
+    "command": "npm run test:e2e -- tests/e2e/background-scenes.spec.ts tests/e2e/background-loop.spec.ts tests/e2e/candy-game.spec.ts",
+    "initialPassed": 9,
+    "initialTimeouts": 1,
+    "retryCommand": "npm run test:e2e -- tests/e2e/background-loop.spec.ts",
+    "retryPassed": 1,
+    "uniqueTestsPassed": 10,
+    "note": "Initial loop test timed out after a long execution gap while sampling existing chocolate original video; retained trace. Same assertions and timeout passed on isolated rerun. Underlying cause unconfirmed."
+  },
+  "video": {
+    "command": "npm run test:video -- tests/video-integration/chocolate.spec.ts --grep cotton-candy",
+    "passed": 1,
+    "wallSeconds": 120.562,
+    "activeSeconds": 120.52860000000001,
+    "gameTime": 120.54520000001402,
+    "loops": 15,
+    "frameCount": 2883,
+    "droppedFrames": 0,
+    "maxLoopGapMs": 83.40000000000873,
+    "maxFrameGapMs": 83.40000000000873,
+    "maxWaitingMs": 26.700000001117587,
+    "stalled": 0,
+    "gapsOver250ms": 0,
+    "pauseResumePassed": true,
+    "seekIndependentClockPassed": true,
+    "overlaySuccesses": 4,
+    "errors": []
+  },
+  "existingVideosUnchanged": true
+}

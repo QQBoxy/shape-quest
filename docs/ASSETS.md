@@ -56,3 +56,24 @@ v2 原始影片與參考圖保留不改寫。`l03_candy_001_v2_faststart.mp4` �
 ## 2026-11-01：糖果王國正式遊戲驗證入口
 
 上述兩支 8 影格淡化 MP4 已接入首頁開始前場景選擇，可分別以 120 秒回合遊玩；整局固定同一場景，重玩沿用選擇。影片內容與雜湊沒有變更，未新增自動轉場。草原 60 秒預設與 Video Lab 保留。工程測試使用真實模型推論及合成關鍵點，真人 Webcam、手機／平板及電視投放尚待驗收，詳見 [正式整合報告](CANDY_GAME_INTEGRATION_REPORT.md)。
+
+
+## 2026-11-02：巧克力河畔取代薑餅村莊
+
+正式遊戲與 Video Lab 已移除薑餅村莊選項，改為巧克力河畔（scene=chocolate）。新原片位於 `public/videos/level-03/l03_candy_003.mp4`，參考圖位於 `public/references/level-03/l03_candy_003_reference.png`；原始名稱與搬移前後相同的 SHA-256 見 `video-tests/l03-candy-003/source-manifest.json`。
+
+標準淡化版為 `public/videos/level-03/l03_candy_003_original_xfade.mp4`，完整 190 影格原片首尾重疊 8 影格，輸出 182 影格、24 FPS、1280×720、無音軌 H.264/yuv420p/faststart。重建指令：`node scripts/prepare-candy-video.mjs --chocolate`；其他滑桿版本加 `--fade-presets`。棒棒糖與既有玩法不變；薑餅舊素材與驗證報告保留為歷史存檔，不再是可選場景。新素材的真人及裝置驗收仍待執行。
+
+## 2026-11-02：果凍軟糖城與糖果王國場景順序
+
+目前可選順序為棒棒糖森林大道（`lollipop`）、巧克力湖畔（`chocolate`，原稱巧克力河畔，素材沿用）、果凍軟糖城（`gummy`）。第四個棉花糖森林只使用 v2，待收到素材再加入。
+
+果凍原片：`public/videos/level-03/l03_candy_004.mp4`；參考圖：`public/references/level-03/l03_candy_004_reference.png`；標準淡化：`public/videos/level-03/l03_candy_004_original_xfade.mp4`。完整原片 190 影格，以既有腳本 `--gummy` 做 8 影格首尾交叉淡化，輸出 182 影格、7.583333 秒、24 FPS、1280×720、H.264/yuv420p、無音軌與 faststart。滑桿版本為 `fades/004-original-{4,12,16,20,24}.mp4`。搬移雜湊與量測見 `video-tests/l03-candy-004/`；整合規格、視覺限制與測試結果見 [糖果王國場景整合](CANDY_KINGDOM_SCENES.md)。新增素材仍為未正式人工驗收的候選。
+
+## 2026-11-02：棉花糖森林素材歸檔
+
+根目錄新提供的原片與參考圖已搬至 `public/videos/level-03/l03_candy_005_v2.mp4`、`public/references/level-03/l03_candy_005_v2_reference.png`，沿用預留的第四場景 v2 命名。兩份檔案搬移前後 SHA-256 一致，原始名稱及雜湊見 [來源清單](video-tests/l03-candy-005-v2/source-manifest.json)。原片為 1280×720、24 FPS、190 影格、影像長 7.916667 秒；[ffprobe 紀錄](video-tests/l03-candy-005-v2/source-probe.json)另存。此批次僅搬移及記錄來源，尚未後製、啟用選單或完成循環驗收。
+
+## 2026-11-02：棉花糖森林 v2 場景整合
+
+`cotton-candy` 已排在糖果王國第四個背景，正式遊戲與 Video Lab 共用場景配置。標準淡化版為 `public/videos/level-03/l03_candy_005_v2_original_xfade.mp4`；既有腳本以 `--cotton-candy` 使用完整 190 影格原片做 8 影格首尾重疊，輸出 182 影格、7.583333 秒、24 FPS、1280×720、H.264/yuv420p、無音軌及 faststart。滑桿素材為 `fades/005-v2-original-{4,12,16,20,24}.mp4`。原片及參考圖保持原內容，前三個場景素材沿用。規格、解碼檢查及測試資料存於 `docs/video-tests/l03-candy-005-v2/`；結果與視覺限制見 [糖果王國場景整合](CANDY_KINGDOM_SCENES.md)。工程結果不等於人工視覺驗收。

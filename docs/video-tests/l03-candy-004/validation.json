@@ -1,0 +1,42 @@
+{
+  "testedAt": "2026-11-02T02:08:52.086Z",
+  "build": {
+    "command": "npm run build",
+    "passed": true
+  },
+  "unit": {
+    "command": "npm test",
+    "passed": 112
+  },
+  "e2e": {
+    "command": "npm run test:e2e",
+    "passed": 34,
+    "durationMinutes": 4.9
+  },
+  "video": {
+    "command": "npm run test:video -- tests/video-integration/chocolate.spec.ts --grep gummy",
+    "passed": 1,
+    "durationMinutes": 2.4,
+    "scene": "gummy",
+    "wallSeconds": 120.588,
+    "activeSeconds": 120.56179999999999,
+    "gameTime": 120.57850000001397,
+    "loops": 15,
+    "frameCount": 2884,
+    "droppedFrames": 0,
+    "maxFrameGapMs": 83.40000000000146,
+    "maxLoopGapMs": 83.40000000000146,
+    "maxWaitingMs": 30,
+    "stalled": 0,
+    "gapsOver250ms": 0,
+    "overlaySuccesses": 4,
+    "pauseResumePassed": true,
+    "seekIndependentClockPassed": true,
+    "errors": []
+  },
+  "existingLollipopAndChocolateAssetsUnchanged": true,
+  "cottonCandyV2": {
+    "status": "awaiting-source",
+    "tested": false
+  }
+}
