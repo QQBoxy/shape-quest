@@ -1,23 +1,7 @@
 [
   {
-    "path": "public/videos/level-03/l03_candy_001.mp4",
-    "sha256": "5efb19ba15996d2453ea4a87983a1ab9d6271325f7f2ae0a6a45c5d6d9fe5182"
-  },
-  {
-    "path": "public/videos/level-03/l03_candy_001_original_xfade.mp4",
-    "sha256": "d2a3d6c0795fcdd07f6605b6fbad44f29d628867835cd7de0a0c54f6165373aa"
-  },
-  {
-    "path": "public/videos/level-03/l03_candy_001_trim.mp4",
-    "sha256": "136d618de28873d4d3827e3594fe06cb19aadff4fa663d5761f9ad79ec5d2779"
-  },
-  {
     "path": "public/videos/level-03/l03_candy_001_v2.mp4",
     "sha256": "0948748697b563a4723fbd63af0c9141b894bd7652eb24863cad4a82af4ee0d9"
-  },
-  {
-    "path": "public/videos/level-03/l03_candy_001_v2_faststart.mp4",
-    "sha256": "bb65f81005d254c3cf812721ba3f91b9cd60e41b2cf81d4d555517c30746e5fb"
   },
   {
     "path": "public/videos/level-03/l03_candy_001_v2_original_xfade.mp4",
@@ -30,18 +14,6 @@
   {
     "path": "public/videos/level-03/l03_candy_001_v2_xfade.mp4",
     "sha256": "3defaf18b8f289980b9db379ecfbb10bb5e9cf7830d551f16e3fe3f6ee228c12"
-  },
-  {
-    "path": "public/videos/level-03/l03_candy_001_xfade.mp4",
-    "sha256": "ce4179709acb2de5478c629fa8d174fa749c2eaa78ff0161e3091c1e85eb951c"
-  },
-  {
-    "path": "public/videos/level-03/l03_candy_002.mp4",
-    "sha256": "2690436732b55341bf51213576950097cb32d7f04b3294ed459c1b5dae4560a2"
-  },
-  {
-    "path": "public/videos/level-03/l03_candy_002_original_xfade.mp4",
-    "sha256": "28b7831de9c3b020f7871e8627ed1cca47bbbea27f96c603f80151b7b78fadd1"
   },
   {
     "path": "public/videos/level-03/l03_candy_003.mp4",

@@ -6,5 +6,3 @@ public/wasm/
 public/models/*.task
 .DS_Store
 test-results-video/
-test-results-hybrid/
-test-results-transition/
