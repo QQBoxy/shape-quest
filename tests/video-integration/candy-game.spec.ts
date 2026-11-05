@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
 // Measure this local performance scenario in a visible browser, as for manual play.
 test.use({ headless: false });
-const output = "docs/game-tests/chocolate-riverside";
+const output = "test-results-video/candy-game";
 test.afterEach(async ({ page }, info) => {
   if (info.status === info.expectedStatus) return;
   const data = await page.evaluate(() => ({

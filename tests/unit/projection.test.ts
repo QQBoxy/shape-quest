@@ -22,6 +22,7 @@ it("keeps a uniform scene scale on portrait and landscape canvases", () => {
       getContext: () => ({
         setTransform: (...values: number[]) => { transform = values; },
         clearRect: () => {},
+        beginPath: () => {}, moveTo: () => {}, lineTo: () => {}, closePath: () => {}, fill: () => {}, stroke: () => {},
       }),
     } as unknown as HTMLCanvasElement;
     Object.defineProperty(globalThis, "devicePixelRatio", { value: 2, configurable: true });

@@ -20,6 +20,9 @@ export class VideoMetrics {
   breakSequence() {
     this.previous = null;
   }
+  isWrap(media: number, duration: number) {
+    return !!this.previous && this.previous.media - media > duration / 2;
+  }
   sample(
     wall: number,
     media: number,
@@ -27,13 +30,13 @@ export class VideoMetrics {
     difference: { fullMAE: number; roadMAE: number },
   ): boolean {
     const previous = this.previous;
+    const wrapped = this.isWrap(media, duration);
     this.previous = { wall, media };
     this.frameCount++;
     if (!previous) return false;
     const gap = wall - previous.wall;
     this.maxFrameGapMs = Math.max(this.maxFrameGapMs, gap);
     if (gap > 250) this.gapsOver250ms++;
-    const wrapped = previous.media - media > duration / 2;
     if (wrapped)
       this.loops.push({
         loop: this.loops.length + 1,

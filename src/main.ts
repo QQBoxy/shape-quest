@@ -5,6 +5,7 @@ import { Calibration, CALIBRATION_STEPS } from "./calibration";
 import { Game } from "./game";
 import { Background } from "./background";
 import { CANDY_SCENES, CANDY_DURATION, CANDY_PROJECTION } from "./scenes";
+import { CameraCoordinates, cameraSide } from "./camera-orientation";
 import { openCamera, cameraError, type CameraChoice } from "./camera";
 import { Renderer, drawCamera } from "./renderer";
 import type { PoseTracker } from "./pose";
@@ -65,9 +66,9 @@ $("app").innerHTML = `
 <dialog id="game-menu" class="game-menu" aria-labelledby="menu-title">
   <div class="menu-heading"><div><span class="eyebrow">SHAPE QUEST</span><h2 id="menu-title">冒險選單</h2></div><button id="menu-close" class="button" aria-label="關閉選單">✕</button></div>
   <div id="game-controls" class="menu-actions" hidden><button id="preview-toggle" class="button" aria-pressed="false">顯示鏡頭</button><button id="exit" class="button">結束探險</button></div>
-  <details class="camera-settings"><summary>鏡頭設定</summary><label for="camera-choice">選擇鏡頭</label><select id="camera-choice"><option value="front">前鏡頭</option><option value="rear">後鏡頭（電視投放）</option></select><p>開啟鏡頭後會列出裝置提供的鏡頭，可選廣角或超廣角；切換鏡頭後需重新校正。未列出的鏡頭無法由網頁強制開啟。</p><button id="reset-camera" class="button" hidden>重新擺放手機與校正</button></details>
+  <details class="camera-settings"><summary>鏡頭設定</summary><label for="camera-choice">選擇鏡頭</label><select id="camera-choice"><option value="front">前鏡頭</option><option value="rear">後鏡頭（電視投放）</option></select><p>開啟鏡頭後會列出裝置提供的鏡頭，可選廣角或超廣角；切換鏡頭後需重新校正。未列出的鏡頭無法由網頁強制開啟。</p><button id="swap-camera-side" class="button">Camera 換邊</button><button id="reset-camera" class="button" hidden>重新擺放手機與校正</button></details>
   <details class="menu-help"><summary>怎麼玩？</summary><div class="menu-moves"><p>${icon("jump")}輕輕跳，越過路障 <kbd>↑ / 空白鍵</kbd></p><p>${icon("duck")}蹲低低，躲過橫木 <kbd>↓</kbd></p><p>${icon("left")}左右跨步，再回中央 <kbd>← →</kbd></p></div><p>每成功一次，空心愛心就填滿三分之一；累積 3 次補回一心，失敗也會保留補血進度喔！</p><p id="status" role="status">請由家長協助固定裝置，讓頭部與雙腳完整入鏡。</p><p>先確認周圍有足夠活動空間。影像只在你的裝置處理，不上傳、不保存。</p></details>
-  <details class="menu-tools"><summary>進階與測試工具</summary><div class="menu-actions"><button id="debug-toggle" class="button" aria-pressed="false">校正格線</button><a class="button" href="?faceTest=1">臉部 Webcam 診斷 ↗</a><a class="button" href="?videoTest=1">影片整合測試 ↗</a><label class="button video-import">＋ 測試背景影片<input id="video-file" type="file" accept="video/mp4,video/*"></label></div><p id="background-label">程式動態背景 · 影片製作中</p></details>
+  <details class="menu-tools"><summary>進階與測試工具</summary><div class="menu-actions"><button id="debug-toggle" class="button" aria-pressed="false">校正格線</button><a class="button" href="?faceTest=1">臉部 Webcam 診斷 ↗</a><a class="button" href="?videoTest=1">影片整合測試 ↗</a><label class="button video-import">＋ 測試背景影片<input id="video-file" type="file" accept="video/mp4,video/*"></label></div><p id="background-label">程式動態背景 · 陽光草原</p></details>
 </dialog>
 <video id="camera" class="camera-source" muted playsinline></video><div id="toast" class="toast" role="status" hidden></div>`;
 
@@ -85,12 +86,21 @@ let game = new Game(selectedScene === "meadow" ? CONFIG.duration : CANDY_DURATIO
 const renderer = new Renderer($<HTMLCanvasElement>("world"));
 const background = new Background($<HTMLVideoElement>("background"));
 const camera = $<HTMLVideoElement>("camera");
+const cameraPreview = $("camera-preview");
+const posePreview = $<HTMLCanvasElement>("pose-preview");
+const hearts = $("hearts");
+const heartItems = hearts.querySelectorAll<HTMLElement>(".heart");
+const trackingLabel = $("tracking").querySelector("span")!;
+const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 let screen: "home" | "modes" | "loading" | "calibration" | "game" | "results" | "error" =
   "home";
 let mode: "camera" | "manual" = "camera";
 let trackingMode: "body" | "face" = "body";
 let faceCalibration = new FaceCalibration();
 let liveFace: FaceFeatures | null = null;
+let cameraCoordinates = new CameraCoordinates();
+let rotatingUntil = 0, orientationGamePhase: typeof game.phase | null = null;
+let lastOrientation = "";
 const faceDetector = new FaceDetector();
 const ready = () => trackingMode === "face" ? faceCalibration.done : calibration.done;
 let stream: MediaStream | null = null,
@@ -152,6 +162,8 @@ function release() {
   stream?.getTracks().forEach((t) => t.stop());
   stream = null;
   camera.srcObject = null;
+  cameraCoordinates = new CameraCoordinates();
+  rotatingUntil = 0; orientationGamePhase = null;
   points = [];
   liveFace = null;
   tracked = false;
@@ -189,9 +201,9 @@ function updateScreen() {
   menu.querySelector(".menu-moves")!.innerHTML = renderer.faceMode
     ? "<p>↕ ↔ 上仰、低頭、左右轉頭，完成後自然放鬆。</p><p>🙂 跟圖示張嘴、左右歪頭或睜眼搭配輕抬眉毛，維持一下。</p><p>六種穿牆：張嘴、左歪、右歪、睜眼＋抬眉、露齒微笑、自然閉嘴巴；各做一種即可。</p><p>擊破題：6 秒內完成 3 次張嘴、閉嘴，不用快速動作。</p>"
     : bodyHelp;
-  $("camera-preview").querySelector("span")!.textContent = trackingMode === "face"
+  cameraPreview.querySelector("span")!.textContent = trackingMode === "face"
     ? "鏡像預覽 · 看著遊戲畫面，跟著大臉示範做動作" : "中央黃線固定 · 先移動手機對齊身體";
-  $("pose-preview").setAttribute("aria-label", trackingMode === "face" ? "鏡像攝影機與臉部追蹤" : "鏡像攝影機與人體骨架");
+  posePreview.setAttribute("aria-label", trackingMode === "face" ? "鏡像攝影機與臉部追蹤" : "鏡像攝影機與人體骨架");
   show("home-stamp", screen === "home");
   show("hud", playing);
   show("tracking", mode === "camera" && (playing || screen === "calibration"));
@@ -205,7 +217,7 @@ function updateScreen() {
     "camera-preview",
     screen === "calibration" || (playing && showPreview && mode === "camera"),
   );
-  $("camera-preview").classList.toggle("calibrating", screen === "calibration");
+  cameraPreview.classList.toggle("calibrating", screen === "calibration");
   $("stage").classList.toggle("in-game", playing);
   $("stage").classList.toggle("manual-input", playing && mode === "manual");
   $("stage").classList.remove("is-recovering");
@@ -347,7 +359,7 @@ async function selectScene() {
   updateSceneControls();
   $("scene-status").textContent = "正在準備場景…";
   try {
-    if (candy) await background.load(asset(`videos/level-03/${candy.stem}_original_xfade.mp4`), candy.label);
+    if (candy) await background.transition(asset(`videos/level-03/${candy.stem}_original_xfade.mp4`), candy.label);
     else { background.clear(); background.status = "程式動態背景 · 陽光草原"; }
     sceneReady = true;
     $("scene-status").textContent = `一局 ${game.duration} 秒 · ${candy ? "糖果王國" : "陽光草原"}`;
@@ -402,7 +414,9 @@ function updatePause() {
     { id: "resume", text: "準備好了，繼續", run: resume },
     { id: "pause-home", text: "回首頁", run: home },
   ];
-  if (reasons.has("camera")) {
+  if (reasons.has("orientation")) {
+    title = "正在調整畫面方向"; body = "校正已保留，畫面穩定後會自動繼續。"; buttons.shift();
+  } else if (reasons.has("camera")) {
     title = "鏡頭中斷了";
     body = "請回首頁重新開啟鏡頭與校正，暫停期間不會扣血。";
     buttons.shift();
@@ -459,13 +473,15 @@ function finish() {
   );
 }
 function onPose(sample: Point[], now: number) {
-  points = sample;
   if (now - lastPoseAt > CONFIG.poseStaleMs) stableSince = null;
-  const f = features(
-    sample,
-    camera.videoWidth / camera.videoHeight || 4 / 3,
+  const oriented = cameraCoordinates.pose(sample, camera.videoWidth, camera.videoHeight);
+  points = oriented.points;
+  const raw = features(
+    oriented.points,
+    oriented.aspect,
     screen === "game" || (screen === "calibration" && calibration.step > 0),
   );
+  const f = raw ? cameraCoordinates.body(raw, oriented.aspect) : null;
   tracked = !!f;
   if (f) lastTrackedAt = now;
   lastPoseAt = now;
@@ -516,7 +532,8 @@ function onPose(sample: Point[], now: number) {
 }
 function onFace(sample: FaceSample, now: number) {
   points = sample.points;
-  const f = sample.trackingIssue ? null : sample.features;
+  const raw = sample.trackingIssue ? null : sample.features;
+  const f = raw ? cameraCoordinates.face(raw, camera.videoWidth, camera.videoHeight) : null;
   liveFace = f;
   if (now - lastPoseAt > CONFIG.poseStaleMs) stableSince = null;
   tracked = !!f; lastPoseAt = now;
@@ -535,7 +552,7 @@ function onFace(sample: FaceSample, now: number) {
 function updateHUD(now: number) {
   show("manual-hint", screen === "game" && mode === "manual" &&
     (game.phase === "playing" || game.phase === "countdown"));
-  $("hearts").querySelectorAll<HTMLElement>(".heart").forEach((heart, index) => {
+  heartItems.forEach((heart, index) => {
     const fill = Math.max(0, Math.min(CONFIG.healthPerHeart,
       game.health - index * CONFIG.healthPerHeart)) / CONFIG.healthPerHeart;
     const previous = heart.dataset.fill;
@@ -543,19 +560,19 @@ function updateHUD(now: number) {
     heart.dataset.fill = String(fill);
     heart.style.setProperty("--empty", `${(1 - fill) * 100}%`);
     if (fill === 1 && previous !== undefined && Number(previous) < 1 &&
-        game.phase === "playing" && !matchMedia("(prefers-reduced-motion: reduce)").matches)
+        game.phase === "playing" && !reducedMotion.matches)
       heart.animate([{ transform: "scale(1)" }, { transform: "scale(1.2)" },
         { transform: "scale(1)" }], { duration: 350 });
   });
   const fullHearts = Math.floor(game.health / CONFIG.healthPerHeart);
-  $("hearts").setAttribute("aria-label", `剩餘 ${fullHearts} 顆愛心` +
+  hearts.setAttribute("aria-label", `剩餘 ${fullHearts} 顆愛心` +
     (game.health < game.maxHealth
       ? `，下一顆補血進度 ${game.health % CONFIG.healthPerHeart}／${CONFIG.healthPerHeart}` : ""));
   $("score").textContent = String(game.score).padStart(4, "0");
   $("timer").textContent = `${game.remaining} 秒`;
   const valid = tracked && now - lastPoseAt <= CONFIG.poseStaleMs;
   $("tracking").classList.toggle("lost", !valid);
-  $("tracking").querySelector("span")!.textContent = valid
+  trackingLabel.textContent = valid
     ? "動作追蹤中"
     : screen === "calibration" ? trackingMode === "face" ? "請讓整張臉入鏡" : "請站進鏡頭裡" : trackingMode === "face" ? "臉部追蹤暫時中斷" : "請看鏡頭預覽";
   if (screen === "calibration") updateCalibration();
@@ -605,20 +622,32 @@ function updateHUD(now: number) {
         .map((p) => `(${p.x.toFixed(2)},${p.y.toFixed(2)})`)
         .join(" ")}`;
   }
-  $("background-label").textContent = background.url
+  $("background-label").textContent = background.url || background.status.includes("失敗")
     ? background.status
-    : background.status.includes("失敗")
-      ? background.status
-      : "程式動態背景 · 影片製作中";
+    : "程式動態背景 · 陽光草原";
 }
 function frame(now: number) {
+  const orientationSettling = !!rotatingUntil;
+  if (rotatingUntil && now >= rotatingUntil && camera.readyState >= 2 && !document.hidden) {
+    rotatingUntil = 0;
+    lastPoseAt = lastTrackedAt = now;
+    game.clearPause("orientation");
+    if (orientationGamePhase) {
+      if (!game.pauseReasons.size) {
+        game.phase = orientationGamePhase;
+        show("dialog", false);
+      } else updatePause();
+      orientationGamePhase = null;
+      lastGamePhase = game.phase;
+    } else if (screen === "game" && game.phase === "paused") updatePause();
+  }
   let sampledAction: Action | undefined;
   const elapsed = (now - lastFrame) / 1000;
   lastFrame = now;
   const dt = Math.min(elapsed, 0.1);
   renderFps = 0.95 * renderFps + 0.05 / Math.max(elapsed, 0.001);
-  if (screen === "game" && elapsed > 0.5) game.pause("hidden");
-  if (tracker && !document.hidden && (!menu.open || screen === "game")) {
+  if (screen === "game" && elapsed > 0.5 && !orientationSettling) game.pause("hidden");
+  if (tracker && !rotatingUntil && !document.hidden && (!menu.open || screen === "game")) {
     try {
       const sample = tracker.sample(camera, now);
       if (sample) sampledAction = Array.isArray(sample) ? onPose(sample, now) : onFace(sample, now);
@@ -631,7 +660,7 @@ function frame(now: number) {
     screen === "game" &&
     mode === "camera" &&
     trackingMode === "body" &&
-    now - lastTrackedAt > CONFIG.trackingLostMs
+    !rotatingUntil && now - lastTrackedAt > CONFIG.trackingLostMs
   ) {
     tracked = false;
     stableSince = null;
@@ -664,14 +693,17 @@ function frame(now: number) {
     screen === "home" ? sceneTime : game.time,
     background.visible,
   );
-  if (!$("camera-preview").hidden && trackingMode === "body")
+  if (!cameraPreview.hidden && trackingMode === "body")
     drawCamera(
-      $<HTMLCanvasElement>("pose-preview"),
+      posePreview,
       camera,
       points,
-      calibration.baseline,
+      calibration.baseline ? cameraCoordinates.bodyPreview(calibration.baseline, cameraCoordinates.aspect(camera.videoWidth, camera.videoHeight)) : null,
+      cameraCoordinates.imageRotation,
+      cameraCoordinates.bodyRange(calibration.baseline ? CONFIG.returnRange * calibration.baseline.height : CONFIG.setupCenterRange,
+        cameraCoordinates.aspect(camera.videoWidth, camera.videoHeight)),
     );
-  if (!$("camera-preview").hidden && trackingMode === "face") {
+  if (!cameraPreview.hidden && trackingMode === "face") {
     const calibrating = screen === "calibration";
     const returning = calibrating ? faceCalibration.returning : game.phase !== "playing";
     const action = calibrating
@@ -681,8 +713,8 @@ function frame(now: number) {
       ? `${token}:lesson:${faceCalibration.step}:${faceCalibration.returning}:${faceCalibration.done}`
       : `${token}:${screen}:${game.phase}:${game.next?.id ?? "none"}`;
     if (key !== faceDemoKey) { faceDemoKey = key; faceDemoStartedAt = now; }
-    const demoAmount = faceDemoAmount(now - faceDemoStartedAt, action, matchMedia("(prefers-reduced-motion: reduce)").matches);
-    drawFaceCamera($<HTMLCanvasElement>("pose-preview"), camera, faceCalibration.baseline, calibrating ? {
+    const demoAmount = faceDemoAmount(now - faceDemoStartedAt, action, reducedMotion.matches);
+    drawFaceCamera(posePreview, camera, faceCalibration.baseline, calibrating ? {
       action, amount: demoAmount, returning: calibrating && faceCalibration.returning, live: liveFace,
       progress: returning ? faceCalibration.releaseProgress : faceCalibration.progress,
       done: faceCalibration.done,
@@ -691,7 +723,7 @@ function frame(now: number) {
       conditionMatches: faceCalibration.conditionMatches,
       releaseAction: returning ? FACE_ACTIONS[faceCalibration.step - 1] : undefined,
       message: faceCalibration.message,
-    } : undefined);
+    } : undefined, cameraCoordinates.imageRotation);
   }
   if (now - lastUI > 100) {
     updateHUD(now);
@@ -894,3 +926,33 @@ $("scene-choice").onchange = () => void selectScene();
 updateScreen();
 void selectScene();
 requestAnimationFrame(frame);
+
+function updateCameraOrientation(videoChanged = false) {
+  // Use window.screen: the local `screen` variable is the game view, not the API.
+  const orientation = window.screen.orientation;
+  const legacy = (window as Window & { orientation?: number }).orientation;
+  const type = orientation?.type ?? (matchMedia("(orientation: landscape)").matches ? "landscape-primary" : "portrait-primary");
+  const angle = orientation?.angle ?? legacy ?? 0;
+  const key = `${type}:${angle}`;
+  if (key !== lastOrientation) {
+    document.body.dataset.cameraSide = cameraSide(type, angle);
+    lastOrientation = key;
+  } else if (!videoChanged) return;
+  if (!stream || mode !== "camera" || !["calibration", "game"].includes(screen)) return;
+  cameraCoordinates.requestRotation();
+  calibration.interrupt(); faceCalibration.interrupt(); faceDetector.reset(); detector = freshDetector();
+  points = []; tracked = false; stableSince = null;
+  rotatingUntil = performance.now() + 450;
+  if (screen === "game") {
+    if (!orientationGamePhase && (game.phase === "playing" || game.phase === "countdown")) orientationGamePhase = game.phase;
+    game.pause("orientation"); updatePause(); lastGamePhase = game.phase;
+  }
+}
+window.screen.orientation?.addEventListener("change", () => updateCameraOrientation());
+window.addEventListener("orientationchange", () => updateCameraOrientation());
+window.addEventListener("resize", () => updateCameraOrientation());
+camera.addEventListener("resize", () => updateCameraOrientation(true));
+$("swap-camera-side").onclick = () => {
+  document.body.dataset.cameraSide = document.body.dataset.cameraSide === "right" ? "left" : "right";
+};
+updateCameraOrientation();

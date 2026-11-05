@@ -1,0 +1,5340 @@
+{
+  "carousel": true,
+  "carouselSeconds": 8,
+  "nextSceneIn": 1.9381999999982327,
+  "switchPoC": true,
+  "switching": false,
+  "queuedScene": null,
+  "switchError": "",
+  "switches": [
+    {
+      "from": "lollipop",
+      "to": "chocolate",
+      "requestedGameTime": 8.009700000000041,
+      "waitMs": 1000.6999999992549,
+      "loadMs": 40.900000002235174,
+      "firstFrameMs": 82.30000000074506,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 9.009700000000029,
+        "score": 0,
+        "health": 2994,
+        "successes": 0,
+        "misses": 2,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "pending"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "pending"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "pending"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "pending"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 9.409600000000024,
+        "score": 0,
+        "health": 2994,
+        "successes": 0,
+        "misses": 2,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "pending"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "pending"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "pending"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "pending"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "chocolate",
+      "to": "gummy",
+      "requestedGameTime": 17.442600000000034,
+      "waitMs": 0.09999999776482582,
+      "loadMs": 50,
+      "firstFrameMs": 98.80000000074506,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 17.442600000000034,
+        "score": 0,
+        "health": 2988,
+        "successes": 0,
+        "misses": 4,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "pending"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "pending"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 17.90920000000004,
+        "score": 0,
+        "health": 2988,
+        "successes": 0,
+        "misses": 4,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "pending"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "pending"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "gummy",
+      "to": "cotton-candy",
+      "requestedGameTime": 25.942200000000128,
+      "waitMs": 0.10000000149011612,
+      "loadMs": 42.19999999925494,
+      "firstFrameMs": 97.19999999925494,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 25.942200000000128,
+        "score": 0,
+        "health": 2982,
+        "successes": 0,
+        "misses": 6,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 26.40880000000013,
+        "score": 0,
+        "health": 2982,
+        "successes": 0,
+        "misses": 6,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "pending"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "pending"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "pending"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "cotton-candy",
+      "to": "lollipop",
+      "requestedGameTime": 34.44180000000021,
+      "waitMs": 2569.39999999851,
+      "loadMs": 44.900000002235174,
+      "firstFrameMs": 95.40000000223517,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 37.00840000000024,
+        "score": 0,
+        "health": 2973,
+        "successes": 0,
+        "misses": 9,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 37.47500000000024,
+        "score": 0,
+        "health": 2973,
+        "successes": 0,
+        "misses": 9,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "pending"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "pending"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "lollipop",
+      "to": "chocolate",
+      "requestedGameTime": 45.507900000000326,
+      "waitMs": 0,
+      "loadMs": 33.80000000074506,
+      "firstFrameMs": 99.39999999850988,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 45.507900000000326,
+        "score": 0,
+        "health": 2967,
+        "successes": 0,
+        "misses": 11,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 45.941300000000325,
+        "score": 0,
+        "health": 2967,
+        "successes": 0,
+        "misses": 11,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "pending"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "pending"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "chocolate",
+      "to": "gummy",
+      "requestedGameTime": 53.97430000000042,
+      "waitMs": 0.10000000149011612,
+      "loadMs": 41.900000002235174,
+      "firstFrameMs": 100.30000000074506,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 53.97430000000042,
+        "score": 0,
+        "health": 2961,
+        "successes": 0,
+        "misses": 13,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 54.44090000000043,
+        "score": 0,
+        "health": 2961,
+        "successes": 0,
+        "misses": 13,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "pending"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "pending"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "pending"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "gummy",
+      "to": "cotton-candy",
+      "requestedGameTime": 62.47390000000049,
+      "waitMs": 2535.300000000745,
+      "loadMs": 36.099999997764826,
+      "firstFrameMs": 97.39999999850988,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 65.00720000000045,
+        "score": 0,
+        "health": 2952,
+        "successes": 0,
+        "misses": 16,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 65.47370000000042,
+        "score": 0,
+        "health": 2952,
+        "successes": 0,
+        "misses": 16,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "pending"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "pending"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "cotton-candy",
+      "to": "lollipop",
+      "requestedGameTime": 73.50670000000007,
+      "waitMs": 0.09999999776482582,
+      "loadMs": 56.5,
+      "firstFrameMs": 100.19999999925494,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 73.50670000000007,
+        "score": 0,
+        "health": 2946,
+        "successes": 0,
+        "misses": 18,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 73.97330000000005,
+        "score": 0,
+        "health": 2946,
+        "successes": 0,
+        "misses": 18,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "pending"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "pending"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "pending"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "lollipop",
+      "to": "chocolate",
+      "requestedGameTime": 82.00629999999971,
+      "waitMs": 2999.199999999255,
+      "loadMs": 37.80000000074506,
+      "firstFrameMs": 96.10000000149012,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 85.00609999999959,
+        "score": 0,
+        "health": 2937,
+        "successes": 0,
+        "misses": 21,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "miss"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "miss"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "miss"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 85.47279999999957,
+        "score": 0,
+        "health": 2937,
+        "successes": 0,
+        "misses": 21,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "miss"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "miss"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "miss"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "pending"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "pending"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "chocolate",
+      "to": "gummy",
+      "requestedGameTime": 93.50569999999915,
+      "waitMs": 0,
+      "loadMs": 54,
+      "firstFrameMs": 99,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 93.50569999999915,
+        "score": 0,
+        "health": 2931,
+        "successes": 0,
+        "misses": 23,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "miss"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "miss"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "miss"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "miss"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "miss"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 93.97239999999915,
+        "score": 0,
+        "health": 2931,
+        "successes": 0,
+        "misses": 23,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "miss"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "miss"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "miss"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "miss"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "miss"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "pending"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "pending"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "pending"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "gummy",
+      "to": "cotton-candy",
+      "requestedGameTime": 102.00549999999879,
+      "waitMs": 3002.2000000029802,
+      "loadMs": 38.69999999925494,
+      "firstFrameMs": 96.29999999701977,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 105.00539999999863,
+        "score": 0,
+        "health": 2922,
+        "successes": 0,
+        "misses": 26,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "miss"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "miss"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "miss"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "miss"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "miss"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "miss"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "miss"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "miss"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 105.4385999999986,
+        "score": 0,
+        "health": 2922,
+        "successes": 0,
+        "misses": 26,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "miss"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "miss"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "miss"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "miss"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "miss"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "miss"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "miss"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "miss"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "pending"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "pending"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "from": "cotton-candy",
+      "to": "lollipop",
+      "requestedGameTime": 113.47159999999826,
+      "waitMs": 0.10000000149011612,
+      "loadMs": 52,
+      "firstFrameMs": 97.60000000149012,
+      "freezeMs": 0,
+      "status": "passed",
+      "before": {
+        "time": 113.47159999999826,
+        "score": 0,
+        "health": 2916,
+        "successes": 0,
+        "misses": 28,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "miss"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "miss"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "miss"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "miss"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "miss"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "miss"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "miss"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "miss"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "miss"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "miss"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      },
+      "after": {
+        "time": 113.93819999999823,
+        "score": 0,
+        "health": 2916,
+        "successes": 0,
+        "misses": 28,
+        "obstacles": [
+          {
+            "id": 0,
+            "action": "jump",
+            "collision": 5,
+            "result": "miss"
+          },
+          {
+            "id": 1,
+            "action": "duck",
+            "collision": 9,
+            "result": "miss"
+          },
+          {
+            "id": 2,
+            "action": "left",
+            "collision": 13,
+            "result": "miss"
+          },
+          {
+            "id": 3,
+            "action": "right",
+            "collision": 17,
+            "result": "miss"
+          },
+          {
+            "id": 4,
+            "action": "jump",
+            "collision": 21,
+            "result": "miss"
+          },
+          {
+            "id": 5,
+            "action": "duck",
+            "collision": 25,
+            "result": "miss"
+          },
+          {
+            "id": 6,
+            "action": "left",
+            "collision": 29,
+            "result": "miss"
+          },
+          {
+            "id": 7,
+            "action": "right",
+            "collision": 33,
+            "result": "miss"
+          },
+          {
+            "id": 8,
+            "action": "jump",
+            "collision": 37,
+            "result": "miss"
+          },
+          {
+            "id": 9,
+            "action": "duck",
+            "collision": 41,
+            "result": "miss"
+          },
+          {
+            "id": 10,
+            "action": "left",
+            "collision": 45,
+            "result": "miss"
+          },
+          {
+            "id": 11,
+            "action": "right",
+            "collision": 49,
+            "result": "miss"
+          },
+          {
+            "id": 12,
+            "action": "jump",
+            "collision": 53,
+            "result": "miss"
+          },
+          {
+            "id": 13,
+            "action": "duck",
+            "collision": 57,
+            "result": "miss"
+          },
+          {
+            "id": 14,
+            "action": "left",
+            "collision": 61,
+            "result": "miss"
+          },
+          {
+            "id": 15,
+            "action": "right",
+            "collision": 65,
+            "result": "miss"
+          },
+          {
+            "id": 16,
+            "action": "jump",
+            "collision": 69,
+            "result": "miss"
+          },
+          {
+            "id": 17,
+            "action": "duck",
+            "collision": 73,
+            "result": "miss"
+          },
+          {
+            "id": 18,
+            "action": "left",
+            "collision": 77,
+            "result": "miss"
+          },
+          {
+            "id": 19,
+            "action": "right",
+            "collision": 81,
+            "result": "miss"
+          },
+          {
+            "id": 20,
+            "action": "jump",
+            "collision": 85,
+            "result": "miss"
+          },
+          {
+            "id": 21,
+            "action": "duck",
+            "collision": 89,
+            "result": "miss"
+          },
+          {
+            "id": 22,
+            "action": "left",
+            "collision": 93,
+            "result": "miss"
+          },
+          {
+            "id": 23,
+            "action": "right",
+            "collision": 97,
+            "result": "miss"
+          },
+          {
+            "id": 24,
+            "action": "jump",
+            "collision": 101,
+            "result": "miss"
+          },
+          {
+            "id": 25,
+            "action": "duck",
+            "collision": 105,
+            "result": "miss"
+          },
+          {
+            "id": 26,
+            "action": "left",
+            "collision": 109,
+            "result": "miss"
+          },
+          {
+            "id": 27,
+            "action": "right",
+            "collision": 113,
+            "result": "miss"
+          },
+          {
+            "id": 28,
+            "action": "jump",
+            "collision": 117,
+            "result": "pending"
+          }
+        ]
+      }
+    }
+  ],
+  "score": 0,
+  "health": 2913,
+  "roundDuration": 120,
+  "wallSeconds": 121.239,
+  "scene": "lollipop",
+  "sceneLabel": "棒棒糖森林",
+  "gameOverlay": true,
+  "variant": "original-fade",
+  "file": "l03_candy_001_poc_72f19161_original_xfade.mp4",
+  "fadeSeconds": 0.3333333333333333,
+  "status": "approved",
+  "targetSeconds": 120,
+  "activeSeconds": 119.99459999999999,
+  "reached120": false,
+  "gameTime": 120,
+  "gamePhase": "finished",
+  "successes": 0,
+  "misses": 29,
+  "videoTime": 6.5143,
+  "duration": 7.583333,
+  "paused": true,
+  "muted": true,
+  "playsInline": true,
+  "loop": true,
+  "rate": 1,
+  "profile": {
+    "centerX": 0.5,
+    "horizon": 0.45,
+    "nearHalfWidth": 0.5,
+    "focal": 0.85,
+    "speed": 5,
+    "near": 2
+  },
+  "frameCount": 1613,
+  "maxFrameGapMs": 133.40000000000146,
+  "gapsOver250ms": 0,
+  "waiting": 12,
+  "waitingEvents": [
+    {
+      "gameTime": 7.626400000000036,
+      "videoTime": 0,
+      "durationMs": 42.399999998509884
+    },
+    {
+      "gameTime": 16.576000000000022,
+      "videoTime": 0,
+      "durationMs": 38.100000001490116
+    },
+    {
+      "gameTime": 25.042200000000115,
+      "videoTime": 0,
+      "durationMs": 50.400000002235174
+    },
+    {
+      "gameTime": 33.54190000000019,
+      "videoTime": 0,
+      "durationMs": 27.800000000745058
+    },
+    {
+      "gameTime": 44.60790000000032,
+      "videoTime": 0,
+      "durationMs": 28.399999998509884
+    },
+    {
+      "gameTime": 53.074300000000406,
+      "videoTime": 0,
+      "durationMs": 35.399999998509884
+    },
+    {
+      "gameTime": 61.540600000000495,
+      "videoTime": 0,
+      "durationMs": 50.20000000298023
+    },
+    {
+      "gameTime": 72.57340000000013,
+      "videoTime": 0,
+      "durationMs": 34.599999997764826
+    },
+    {
+      "gameTime": 81.10629999999972,
+      "videoTime": 0,
+      "durationMs": 40.5
+    },
+    {
+      "gameTime": 92.57249999999922,
+      "videoTime": 0,
+      "durationMs": 25.800000000745058
+    },
+    {
+      "gameTime": 101.10549999999883,
+      "videoTime": 0,
+      "durationMs": 37.19999999925494
+    },
+    {
+      "gameTime": 112.57159999999831,
+      "videoTime": 0,
+      "durationMs": 41.099999997764826
+    }
+  ],
+  "stalled": 0,
+  "droppedFrames": 3,
+  "totalFrames": 161,
+  "loops": [
+    {
+      "loop": 1,
+      "activeSeconds": 7.633,
+      "gapMs": 66.69999999999982,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0,
+      "fullMAE": 11.850358796296113,
+      "roadMAE": 10.202265827934802
+    },
+    {
+      "loop": 2,
+      "activeSeconds": 16.599300000000003,
+      "gapMs": 100,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0,
+      "fullMAE": 7.718449074074066,
+      "roadMAE": 10.991612681125384
+    },
+    {
+      "loop": 3,
+      "activeSeconds": 25.0655,
+      "gapMs": 133.40000000000146,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0.041667,
+      "fullMAE": 21.292239583332996,
+      "roadMAE": 15.267924764497877
+    },
+    {
+      "loop": 4,
+      "activeSeconds": 33.53189999999999,
+      "gapMs": 99.90000000000146,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0,
+      "fullMAE": 10.43662037037048,
+      "roadMAE": 5.568710293243209
+    },
+    {
+      "loop": 5,
+      "activeSeconds": 44.597899999999996,
+      "gapMs": 100,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0,
+      "fullMAE": 11.850358796296113,
+      "roadMAE": 10.202265827934802
+    },
+    {
+      "loop": 6,
+      "activeSeconds": 53.097699999999996,
+      "gapMs": 99.90000000000146,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0,
+      "fullMAE": 7.718449074074066,
+      "roadMAE": 10.991612681125384
+    },
+    {
+      "loop": 7,
+      "activeSeconds": 61.5972,
+      "gapMs": 100,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0.041667,
+      "fullMAE": 21.292239583332996,
+      "roadMAE": 15.267924764497877
+    },
+    {
+      "loop": 8,
+      "activeSeconds": 72.59670000000001,
+      "gapMs": 100.10000000000582,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0,
+      "fullMAE": 10.43662037037048,
+      "roadMAE": 5.568710293243209
+    },
+    {
+      "loop": 9,
+      "activeSeconds": 81.12970000000003,
+      "gapMs": 100,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0.041667,
+      "fullMAE": 17.11181134259261,
+      "roadMAE": 14.629925202641347
+    },
+    {
+      "loop": 10,
+      "activeSeconds": 92.59580000000001,
+      "gapMs": 100,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0.041667,
+      "fullMAE": 10.77885995370375,
+      "roadMAE": 17.04869652301824
+    },
+    {
+      "loop": 11,
+      "activeSeconds": 101.12880000000001,
+      "gapMs": 133.39999999999418,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0.041667,
+      "fullMAE": 21.292239583332996,
+      "roadMAE": 15.267924764497877
+    },
+    {
+      "loop": 12,
+      "activeSeconds": 112.595,
+      "gapMs": 100,
+      "beforeMedia": 7.541667,
+      "afterMedia": 0,
+      "fullMAE": 10.43662037037048,
+      "roadMAE": 5.568710293243209
+    }
+  ],
+  "samples": [
+    {
+      "wall": 0.8166,
+      "media": 0.7979,
+      "game": 0.8266000000000003
+    },
+    {
+      "wall": 1.8167,
+      "media": 1.7989,
+      "game": 1.8266999999999984
+    },
+    {
+      "wall": 2.8333000000000004,
+      "media": 2.8017,
+      "game": 2.843299999999998
+    },
+    {
+      "wall": 3.8165999999999998,
+      "media": 3.7991,
+      "game": 3.8265999999999964
+    },
+    {
+      "wall": 4.8331,
+      "media": 4.8026,
+      "game": 4.843100000000007
+    },
+    {
+      "wall": 5.8331,
+      "media": 5.8018,
+      "game": 5.843100000000018
+    },
+    {
+      "wall": 6.8164,
+      "media": 6.7996,
+      "game": 6.826400000000026
+    },
+    {
+      "wall": 7.8163,
+      "media": 0.1795,
+      "game": 7.826300000000039
+    },
+    {
+      "wall": 8.8163,
+      "media": 1.1781,
+      "game": 8.826300000000032
+    },
+    {
+      "wall": 9.766200000000001,
+      "media": 0.7888,
+      "game": 9.776200000000022
+    },
+    {
+      "wall": 10.7661,
+      "media": 1.7905,
+      "game": 10.776100000000019
+    },
+    {
+      "wall": 11.766200000000001,
+      "media": 2.7882,
+      "game": 11.776200000000022
+    },
+    {
+      "wall": 12.7661,
+      "media": 3.7895,
+      "game": 12.776100000000019
+    },
+    {
+      "wall": 13.7661,
+      "media": 4.7902,
+      "game": 13.776100000000017
+    },
+    {
+      "wall": 14.7994,
+      "media": 5.79,
+      "game": 14.809400000000014
+    },
+    {
+      "wall": 15.766,
+      "media": 6.7887,
+      "game": 15.776000000000012
+    },
+    {
+      "wall": 16.766000000000005,
+      "media": 0.1673,
+      "game": 16.776000000000025
+    },
+    {
+      "wall": 17.765900000000002,
+      "media": 1.1663,
+      "game": 17.77590000000004
+    },
+    {
+      "wall": 18.7325,
+      "media": 1.3147,
+      "game": 18.74250000000005
+    },
+    {
+      "wall": 19.7325,
+      "media": 2.3147,
+      "game": 19.74250000000006
+    },
+    {
+      "wall": 20.765700000000002,
+      "media": 3.3156,
+      "game": 20.775700000000057
+    },
+    {
+      "wall": 21.765700000000002,
+      "media": 4.3147,
+      "game": 21.77570000000007
+    },
+    {
+      "wall": 22.7323,
+      "media": 5.3136,
+      "game": 22.742300000000082
+    },
+    {
+      "wall": 23.7323,
+      "media": 6.3152,
+      "game": 23.742300000000096
+    },
+    {
+      "wall": 24.732200000000002,
+      "media": 7.315,
+      "game": 24.742200000000114
+    },
+    {
+      "wall": 25.732100000000003,
+      "media": 0.6803,
+      "game": 25.74210000000013
+    },
+    {
+      "wall": 26.6988,
+      "media": 0.7846,
+      "game": 26.708800000000135
+    },
+    {
+      "wall": 27.6988,
+      "media": 1.7854,
+      "game": 27.708800000000142
+    },
+    {
+      "wall": 28.7321,
+      "media": 2.7888,
+      "game": 28.742100000000153
+    },
+    {
+      "wall": 29.6988,
+      "media": 3.786,
+      "game": 29.708800000000156
+    },
+    {
+      "wall": 30.6987,
+      "media": 4.7852,
+      "game": 30.708700000000164
+    },
+    {
+      "wall": 31.6987,
+      "media": 5.7854,
+      "game": 31.708700000000178
+    },
+    {
+      "wall": 32.69859999999999,
+      "media": 6.785,
+      "game": 32.70860000000018
+    },
+    {
+      "wall": 33.731899999999996,
+      "media": 0.1731,
+      "game": 33.74190000000019
+    },
+    {
+      "wall": 34.698499999999996,
+      "media": 1.1704,
+      "game": 34.70850000000021
+    },
+    {
+      "wall": 35.731899999999996,
+      "media": 2.1753,
+      "game": 35.74190000000022
+    },
+    {
+      "wall": 36.73179999999999,
+      "media": 3.1723,
+      "game": 36.74180000000024
+    },
+    {
+      "wall": 37.698299999999996,
+      "media": 0.6837,
+      "game": 37.70830000000025
+    },
+    {
+      "wall": 38.664899999999996,
+      "media": 1.6843,
+      "game": 38.67490000000026
+    },
+    {
+      "wall": 39.69809999999999,
+      "media": 2.6846,
+      "game": 39.70810000000027
+    },
+    {
+      "wall": 40.69809999999999,
+      "media": 3.688,
+      "game": 40.70810000000028
+    },
+    {
+      "wall": 41.69799999999999,
+      "media": 4.6864,
+      "game": 41.7080000000003
+    },
+    {
+      "wall": 42.664699999999996,
+      "media": 5.6829,
+      "game": 42.67470000000031
+    },
+    {
+      "wall": 43.69799999999999,
+      "media": 6.687,
+      "game": 43.70800000000031
+    },
+    {
+      "wall": 44.66459999999999,
+      "media": 0.0687,
+      "game": 44.67460000000032
+    },
+    {
+      "wall": 45.66449999999999,
+      "media": 1.0703,
+      "game": 45.67450000000032
+    },
+    {
+      "wall": 46.6312,
+      "media": 1.1642,
+      "game": 46.64120000000034
+    },
+    {
+      "wall": 47.6312,
+      "media": 2.1648,
+      "game": 47.64120000000035
+    },
+    {
+      "wall": 48.6645,
+      "media": 3.1644,
+      "game": 48.67450000000037
+    },
+    {
+      "wall": 49.631099999999996,
+      "media": 4.1648,
+      "game": 49.64110000000037
+    },
+    {
+      "wall": 50.6645,
+      "media": 5.1656,
+      "game": 50.674500000000386
+    },
+    {
+      "wall": 51.6644,
+      "media": 6.1698,
+      "game": 51.674400000000404
+    },
+    {
+      "wall": 52.631,
+      "media": 7.163,
+      "game": 52.6410000000004
+    },
+    {
+      "wall": 53.631,
+      "media": 0.5428,
+      "game": 53.64100000000042
+    },
+    {
+      "wall": 54.59750000000001,
+      "media": 0.657,
+      "game": 54.60750000000044
+    },
+    {
+      "wall": 55.6308,
+      "media": 1.658,
+      "game": 55.64080000000045
+    },
+    {
+      "wall": 56.630700000000004,
+      "media": 2.6593,
+      "game": 56.64070000000046
+    },
+    {
+      "wall": 57.6308,
+      "media": 3.6557,
+      "game": 57.64080000000045
+    },
+    {
+      "wall": 58.630700000000004,
+      "media": 4.6571,
+      "game": 58.640700000000464
+    },
+    {
+      "wall": 59.597300000000004,
+      "media": 5.6567,
+      "game": 59.60730000000048
+    },
+    {
+      "wall": 60.63060000000001,
+      "media": 6.6575,
+      "game": 60.64060000000049
+    },
+    {
+      "wall": 61.5972,
+      "media": 0.0199,
+      "game": 61.607200000000496
+    },
+    {
+      "wall": 62.63060000000001,
+      "media": 1.0232,
+      "game": 62.6406000000005
+    },
+    {
+      "wall": 63.630500000000005,
+      "media": 2.0234,
+      "game": 63.6405000000005
+    },
+    {
+      "wall": 64.63050000000001,
+      "media": 3.0239,
+      "game": 64.64050000000047
+    },
+    {
+      "wall": 65.59700000000001,
+      "media": 0.5952,
+      "game": 65.60700000000041
+    },
+    {
+      "wall": 66.56360000000002,
+      "media": 1.5927,
+      "game": 66.5736000000004
+    },
+    {
+      "wall": 67.59690000000002,
+      "media": 2.5922,
+      "game": 67.60690000000035
+    },
+    {
+      "wall": 68.59690000000002,
+      "media": 3.5926,
+      "game": 68.60690000000031
+    },
+    {
+      "wall": 69.59680000000002,
+      "media": 4.5937,
+      "game": 69.60680000000026
+    },
+    {
+      "wall": 70.56350000000002,
+      "media": 5.5917,
+      "game": 70.57350000000022
+    },
+    {
+      "wall": 71.56340000000003,
+      "media": 6.5923,
+      "game": 71.57340000000018
+    },
+    {
+      "wall": 72.59670000000001,
+      "media": 0,
+      "game": 72.60670000000012
+    },
+    {
+      "wall": 73.56330000000001,
+      "media": 0.9715,
+      "game": 73.57330000000006
+    },
+    {
+      "wall": 74.52990000000003,
+      "media": 1.0398,
+      "game": 74.53990000000002
+    },
+    {
+      "wall": 75.56320000000002,
+      "media": 2.0414,
+      "game": 75.57319999999997
+    },
+    {
+      "wall": 76.52980000000002,
+      "media": 3.0391,
+      "game": 76.53979999999991
+    },
+    {
+      "wall": 77.56310000000002,
+      "media": 4.0403,
+      "game": 77.57309999999985
+    },
+    {
+      "wall": 78.52980000000002,
+      "media": 5.0396,
+      "game": 78.53979999999984
+    },
+    {
+      "wall": 79.56300000000003,
+      "media": 6.0414,
+      "game": 79.57299999999981
+    },
+    {
+      "wall": 80.56300000000003,
+      "media": 7.0416,
+      "game": 80.57299999999977
+    },
+    {
+      "wall": 81.56290000000003,
+      "media": 0.4155,
+      "game": 81.57289999999972
+    },
+    {
+      "wall": 82.56300000000003,
+      "media": 1.4167,
+      "game": 82.5729999999997
+    },
+    {
+      "wall": 83.56290000000003,
+      "media": 2.4169,
+      "game": 83.57289999999963
+    },
+    {
+      "wall": 84.56290000000003,
+      "media": 3.4157,
+      "game": 84.5728999999996
+    },
+    {
+      "wall": 85.52940000000001,
+      "media": 0.5262,
+      "game": 85.53939999999955
+    },
+    {
+      "wall": 86.52940000000001,
+      "media": 1.5287,
+      "game": 86.53939999999952
+    },
+    {
+      "wall": 87.52930000000002,
+      "media": 2.527,
+      "game": 87.53929999999949
+    },
+    {
+      "wall": 88.52930000000002,
+      "media": 3.5298,
+      "game": 88.53929999999943
+    },
+    {
+      "wall": 89.52930000000002,
+      "media": 4.5291,
+      "game": 89.53929999999939
+    },
+    {
+      "wall": 90.52930000000002,
+      "media": 5.5276,
+      "game": 90.53929999999933
+    },
+    {
+      "wall": 91.52910000000001,
+      "media": 6.5279,
+      "game": 91.53909999999927
+    },
+    {
+      "wall": 92.52910000000001,
+      "media": 7.5302,
+      "game": 92.53909999999922
+    },
+    {
+      "wall": 93.52910000000001,
+      "media": 0.9258,
+      "game": 93.53909999999917
+    },
+    {
+      "wall": 94.49570000000001,
+      "media": 0.9789,
+      "game": 94.50569999999912
+    },
+    {
+      "wall": 95.49570000000001,
+      "media": 1.9805,
+      "game": 95.50569999999907
+    },
+    {
+      "wall": 96.49560000000001,
+      "media": 2.9784,
+      "game": 96.50559999999902
+    },
+    {
+      "wall": 97.49560000000001,
+      "media": 3.978,
+      "game": 97.50559999999898
+    },
+    {
+      "wall": 98.49560000000001,
+      "media": 4.9784,
+      "game": 98.50559999999892
+    },
+    {
+      "wall": 99.49560000000001,
+      "media": 5.9783,
+      "game": 99.5055999999989
+    },
+    {
+      "wall": 100.49550000000002,
+      "media": 6.9777,
+      "game": 100.50549999999886
+    },
+    {
+      "wall": 101.49550000000002,
+      "media": 0.3549,
+      "game": 101.5054999999988
+    },
+    {
+      "wall": 102.4954,
+      "media": 1.355,
+      "game": 102.50539999999876
+    },
+    {
+      "wall": 103.4954,
+      "media": 2.3576,
+      "game": 103.5053999999987
+    },
+    {
+      "wall": 104.46200000000002,
+      "media": 3.3542,
+      "game": 104.47199999999866
+    },
+    {
+      "wall": 105.46190000000001,
+      "media": 0.4559,
+      "game": 105.4718999999986
+    },
+    {
+      "wall": 106.46190000000001,
+      "media": 1.4567,
+      "game": 106.47189999999858
+    },
+    {
+      "wall": 107.46190000000001,
+      "media": 2.4573,
+      "game": 107.47189999999856
+    },
+    {
+      "wall": 108.4618,
+      "media": 3.4591,
+      "game": 108.4717999999985
+    },
+    {
+      "wall": 109.4618,
+      "media": 4.456,
+      "game": 109.47179999999845
+    },
+    {
+      "wall": 110.4617,
+      "media": 5.4574,
+      "game": 110.4716999999984
+    },
+    {
+      "wall": 111.4617,
+      "media": 6.456,
+      "game": 111.47169999999838
+    },
+    {
+      "wall": 112.4617,
+      "media": 7.4637,
+      "game": 112.47169999999832
+    },
+    {
+      "wall": 113.4616,
+      "media": 0.8334,
+      "game": 113.47159999999826
+    },
+    {
+      "wall": 114.4282,
+      "media": 0.9509,
+      "game": 114.4381999999982
+    },
+    {
+      "wall": 115.42809999999999,
+      "media": 1.9475,
+      "game": 115.43809999999814
+    },
+    {
+      "wall": 116.42809999999999,
+      "media": 2.9522,
+      "game": 116.43809999999812
+    },
+    {
+      "wall": 117.42809999999999,
+      "media": 3.9475,
+      "game": 117.43809999999809
+    },
+    {
+      "wall": 118.428,
+      "media": 4.9504,
+      "game": 118.43799999999804
+    },
+    {
+      "wall": 119.428,
+      "media": 5.9482,
+      "game": 119.437999999998
+    }
+  ],
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+  "note": "Timing and pixel differences do not certify seamlessness or physical 3D alignment.",
+  "errors": []
+}

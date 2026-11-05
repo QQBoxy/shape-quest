@@ -1,0 +1,50 @@
+[
+  {
+    "scene": "lollipop",
+    "activeSeconds": 120.4618,
+    "gameSeconds": 120.47860000001398,
+    "loops": 15,
+    "frames": 2879,
+    "stalled": 0,
+    "gapsOver250ms": 0,
+    "successes": 4,
+    "pauseResumePassed": true,
+    "seekIndependentClockPassed": true
+  },
+  {
+    "scene": "chocolate",
+    "activeSeconds": 120.67849999999999,
+    "gameSeconds": 120.69530000001393,
+    "loops": 15,
+    "frames": 2887,
+    "stalled": 0,
+    "gapsOver250ms": 0,
+    "successes": 4,
+    "pauseResumePassed": true,
+    "seekIndependentClockPassed": true
+  },
+  {
+    "scene": "gummy",
+    "activeSeconds": 120.46179999999998,
+    "gameSeconds": 120.47850000001405,
+    "loops": 15,
+    "frames": 2880,
+    "stalled": 0,
+    "gapsOver250ms": 0,
+    "successes": 4,
+    "pauseResumePassed": true,
+    "seekIndependentClockPassed": true
+  },
+  {
+    "scene": "cotton-candy",
+    "activeSeconds": 120.5452,
+    "gameSeconds": 120.561900000014,
+    "loops": 15,
+    "frames": 2884,
+    "stalled": 0,
+    "gapsOver250ms": 0,
+    "successes": 4,
+    "pauseResumePassed": true,
+    "seekIndependentClockPassed": true
+  }
+]

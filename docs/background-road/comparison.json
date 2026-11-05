@@ -1,0 +1,150 @@
+{
+  "environment": "Playwright Chromium, macOS; portrait is viewport emulation, not a physical phone",
+  "secondsPerCase": 10,
+  "results": [
+    {
+      "scene": "lollipop",
+      "aspect": "landscape",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "elapsedMs": 10000.399999999441,
+      "rafFps": 60.09759609615951,
+      "rafP95Ms": 16.700000000000728,
+      "loops": 1,
+      "waiting": 1,
+      "stalled": 0,
+      "droppedFrames": 0,
+      "totalFrames": 238,
+      "distance": 58.6974,
+      "stats": "1056 × 594 · Canvas 60 FPS · 繪圖提交 0.06 ms · 影片丟格 0 / 235（累計）"
+    },
+    {
+      "scene": "lollipop",
+      "aspect": "portrait",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elapsedMs": 10009.799999999814,
+      "rafFps": 60.041159663530856,
+      "rafP95Ms": 16.700000000000728,
+      "loops": 1,
+      "waiting": 1,
+      "stalled": 0,
+      "droppedFrames": 0,
+      "totalFrames": 237,
+      "distance": 58.398,
+      "stats": "351 × 625 · Canvas 60 FPS · 繪圖提交 0.06 ms · 影片丟格 0 / 233（累計）"
+    },
+    {
+      "scene": "chocolate",
+      "aspect": "landscape",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "elapsedMs": 10016.600000000559,
+      "rafFps": 60.10023361220039,
+      "rafP95Ms": 16.799999999999272,
+      "loops": 1,
+      "waiting": 1,
+      "stalled": 0,
+      "droppedFrames": 0,
+      "totalFrames": 239,
+      "distance": 58.698,
+      "stats": "1056 × 594 · Canvas 60 FPS · 繪圖提交 0.05 ms · 影片丟格 0 / 235（累計）"
+    },
+    {
+      "scene": "chocolate",
+      "aspect": "portrait",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elapsedMs": 10011.000000000186,
+      "rafFps": 60.03396264109368,
+      "rafP95Ms": 16.700000000000728,
+      "loops": 1,
+      "waiting": 1,
+      "stalled": 0,
+      "droppedFrames": 0,
+      "totalFrames": 238,
+      "distance": 58.398,
+      "stats": "351 × 625 · Canvas 60 FPS · 繪圖提交 0.05 ms · 影片丟格 0 / 234（累計）"
+    },
+    {
+      "scene": "gummy",
+      "aspect": "landscape",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "elapsedMs": 10000.200000000186,
+      "rafFps": 60.0987980240384,
+      "rafP95Ms": 16.700000000000728,
+      "loops": 1,
+      "waiting": 1,
+      "stalled": 0,
+      "droppedFrames": 0,
+      "totalFrames": 238,
+      "distance": 58.4976,
+      "stats": "1056 × 594 · Canvas 60 FPS · 繪圖提交 0.04 ms · 影片丟格 0 / 234（累計）"
+    },
+    {
+      "scene": "gummy",
+      "aspect": "portrait",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elapsedMs": 10008.2,
+      "rafFps": 59.95084031094502,
+      "rafP95Ms": 16.700000000000728,
+      "loops": 1,
+      "waiting": 1,
+      "stalled": 0,
+      "droppedFrames": 0,
+      "totalFrames": 238,
+      "distance": 58.2978,
+      "stats": "351 × 625 · Canvas 60 FPS · 繪圖提交 0.05 ms · 影片丟格 0 / 233（累計）"
+    },
+    {
+      "scene": "cotton-candy",
+      "aspect": "landscape",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "elapsedMs": 10008.6,
+      "rafFps": 60.04835841176588,
+      "rafP95Ms": 16.799999999999727,
+      "loops": 1,
+      "waiting": 1,
+      "stalled": 0,
+      "droppedFrames": 0,
+      "totalFrames": 237,
+      "distance": 58.1976,
+      "stats": "1056 × 594 · Canvas 60 FPS · 繪圖提交 0.05 ms · 影片丟格 0 / 231（累計）"
+    },
+    {
+      "scene": "cotton-candy",
+      "aspect": "portrait",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elapsedMs": 10008.299999999814,
+      "rafFps": 59.95024129972235,
+      "rafP95Ms": 16.700000000000728,
+      "loops": 1,
+      "waiting": 1,
+      "stalled": 0,
+      "droppedFrames": 0,
+      "totalFrames": 237,
+      "distance": 58.398,
+      "stats": "351 × 625 · Canvas 60 FPS · 繪圖提交 0.07 ms · 影片丟格 0 / 232（累計）"
+    }
+  ]
+}

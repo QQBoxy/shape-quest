@@ -1,6 +1,9 @@
-if (new URLSearchParams(location.search).has("faceTest")) {
+const params = new URLSearchParams(location.search);
+if (params.has("backgroundRoad")) {
+  void import("./background-road");
+} else if (params.has("faceTest")) {
   void import("./face-test");
-} else if (new URLSearchParams(location.search).has("videoTest")) {
+} else if (params.has("videoTest")) {
   void import("./video-test");
 } else {
   void import("./main");

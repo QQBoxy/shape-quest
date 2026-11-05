@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
-const output = "docs/video-tests/candy-v2-fade";
-for (const variant of ["original-fade", "original", "trim", "xfade"])
+const output = "test-results-video/candy-originals";
+for (const variant of ["original-fade", "original"])
   test(`${variant}: real-time 120-second native loop`, async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", (e) => errors.push(e.message));

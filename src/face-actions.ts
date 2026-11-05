@@ -437,6 +437,11 @@ export class FaceCalibration {
     this.detector.startFromNeutral(f, this.baseline!, now, this.step, action, this.profile);
     this.message = `接下來：${FACE_LABEL[action]}。${FACE_HINT[action]}`;
   }
+  interrupt() {
+    this.samples = []; this.since = null; this.progress = 0;
+    this.observations = this.observations.map(() => []); this.closedSamples = [];
+    this.last = -Infinity; this.detector.reset();
+  }
   start() { this.started = true; }
   update(f: FaceFeatures | null, now: number) {
     if (this.done || !this.started) return;

@@ -1,3 +1,4 @@
+import { drawCameraImage } from "./camera-orientation";
 import { CONFIG, LABEL, type Action, type Projection } from "./config";
 import type { Baseline, Point } from "./actions";
 import type { Game } from "./game";
@@ -85,7 +86,6 @@ export class Renderer {
     game: Game,
     sceneryTime: number,
     hasVideo: boolean,
-    backgroundLayer?: (ctx: CanvasRenderingContext2D) => void,
   ) {
     const ratio = Math.min(devicePixelRatio || 1, 2);
     // Keep the drawing buffer at the scene's aspect ratio. CSS can then fit it
@@ -105,7 +105,7 @@ export class Renderer {
     c.setTransform(width / W, 0, 0, height / H, 0, 0);
     c.clearRect(0, 0, W, H);
     if (!hasVideo) this.scenery(sceneryTime);
-    backgroundLayer?.(c);
+    else this.road(sceneryTime);
     const o = game.next;
     if (o) {
       const z =
@@ -369,6 +369,27 @@ export class Renderer {
       c.fill();
     }
   }
+  road(time: number) {
+    const c = this.ctx, p = this.projection;
+    c.fillStyle = "#fff9eb80";
+    c.beginPath(); c.moveTo(W * p.centerX, H * p.horizon);
+    c.lineTo(W * (.5 + p.nearHalfWidth), H);
+    c.lineTo(W * (.5 - p.nearHalfWidth), H); c.closePath(); c.fill();
+    c.strokeStyle = "#ffffffbd";
+    for (const lane of [-1 / 3, 1 / 3]) {
+      c.lineWidth = 3;
+      c.beginPath(); c.moveTo(W * p.centerX, H * p.horizon);
+      c.lineTo(W * (.5 + p.nearHalfWidth * lane), H); c.stroke();
+    }
+    const half = p.nearHalfWidth * p.near / p.focal;
+    c.strokeStyle = "#ffffff66";
+    for (let i = 0; i < 14; i++) {
+      const z = p.near + ((i * 5 - time * p.speed % 70 + 70) % 70);
+      const l = this.project(-half, 0, z), r = this.project(half, 0, z);
+      c.lineWidth = Math.max(1, 5 * l.scale);
+      c.beginPath(); c.moveTo(l.x, l.y); c.lineTo(r.x, r.y); c.stroke();
+    }
+  }
   overlay() {
     const c = this.ctx,
       h = H * this.projection.horizon;
@@ -420,23 +441,20 @@ export function drawCamera(
   video: HTMLVideoElement,
   points: Point[],
   baseline: Baseline | null,
+  rotation = 0,
+  centerRange = baseline ? CONFIG.returnRange * baseline.height : CONFIG.setupCenterRange,
 ) {
   const c = canvas.getContext("2d")!;
   const w = 640,
-    h = video.videoWidth ? (640 * video.videoHeight) / video.videoWidth : 480;
+    h = video.videoWidth ? 640 * (Math.abs(rotation / 90) % 2 === 1 ? video.videoWidth / video.videoHeight : video.videoHeight / video.videoWidth) : 480;
   if (canvas.width !== w || canvas.height !== h) {
     canvas.width = w;
     canvas.height = h;
   }
   c.clearRect(0, 0, w, h);
   if (video.readyState >= 2) {
-    c.save();
-    c.translate(w, 0);
-    c.scale(-1, 1);
-    c.drawImage(video, 0, 0, w, h);
-    c.restore();
+    drawCameraImage(c, video, 0, 0, w, h, rotation);
   }
-  const centerRange = baseline ? CONFIG.returnRange * baseline.height : CONFIG.setupCenterRange;
   c.fillStyle = "#80e0a438";
   c.fillRect((0.5 - centerRange) * w, 0, 2 * centerRange * w, h);
   c.strokeStyle = "#ffe6a4";

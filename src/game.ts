@@ -1,6 +1,6 @@
 import { ACTIONS, CONFIG, actionPreview, type Action } from "./config";
 export type Phase = "idle" | "countdown" | "playing" | "paused" | "finished";
-export type PauseReason = "manual" | "tracking" | "hidden" | "camera";
+export type PauseReason = "manual" | "tracking" | "hidden" | "camera" | "orientation";
 export interface Obstacle {
   id: number;
   action: Action;

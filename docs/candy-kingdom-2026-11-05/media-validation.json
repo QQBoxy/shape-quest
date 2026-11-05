@@ -1,0 +1,159 @@
+[
+  {
+    "file": "public/videos/level-03/l03_candy_001_poc_72f19161.mp4",
+    "sha256": "f32724d32ba184d36e14982f132985a4506367fda2b387cfa8e62cffc2ed478b",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "7.916667",
+        "nb_frames": "190"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "avg_frame_rate": "0/0",
+        "duration": "7.930000",
+        "nb_frames": "374"
+      }
+    ],
+    "decodePassed": true,
+    "blackIntervals": []
+  },
+  {
+    "file": "public/videos/level-03/l03_candy_001_poc_72f19161_original_xfade.mp4",
+    "sha256": "74a6bbaa30f250e2b4b63d0ca9b7bc6f3843696dfcd6c5cf1684e7d50dd7b560",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "7.583333",
+        "nb_frames": "182"
+      }
+    ],
+    "decodePassed": true,
+    "blackIntervals": []
+  },
+  {
+    "file": "public/videos/level-03/l03_candy_003_poc_9ab4f711.mp4",
+    "sha256": "e6271b647e827580c8d5189fcbbc93c4ce2c4f3dc6864154b6ebef5a73ddcbbf",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "7.916667",
+        "nb_frames": "190"
+      }
+    ],
+    "decodePassed": true,
+    "blackIntervals": []
+  },
+  {
+    "file": "public/videos/level-03/l03_candy_003_poc_9ab4f711_original_xfade.mp4",
+    "sha256": "7bf93519645260114ac95aad990f8a01c1c530733cc943351eb43c7e1e64bda3",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "7.583333",
+        "nb_frames": "182"
+      }
+    ],
+    "decodePassed": true,
+    "blackIntervals": []
+  },
+  {
+    "file": "public/videos/level-03/l03_candy_004_poc_36c9edb4.mp4",
+    "sha256": "465f5769ff4871a0ac020c460f97d1363209d1b1f6d1bcece3b35f5b3a5f0e13",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "7.916667",
+        "nb_frames": "190"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "avg_frame_rate": "0/0",
+        "duration": "7.930000",
+        "nb_frames": "374"
+      }
+    ],
+    "decodePassed": true,
+    "blackIntervals": []
+  },
+  {
+    "file": "public/videos/level-03/l03_candy_004_poc_36c9edb4_original_xfade.mp4",
+    "sha256": "2b9e25c7bc6b06be8fc01e95deec19f302d939a1d857d6f9d6868a259a4d73c5",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "7.583333",
+        "nb_frames": "182"
+      }
+    ],
+    "decodePassed": true,
+    "blackIntervals": []
+  },
+  {
+    "file": "public/videos/level-03/l03_candy_005_poc_e7e3ab4a.mp4",
+    "sha256": "771110b8be8b4eaa0939480dcc538d7aaed0a119f7d2cc662cceaa257991934e",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "7.916667",
+        "nb_frames": "190"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "avg_frame_rate": "0/0",
+        "duration": "7.930000",
+        "nb_frames": "374"
+      }
+    ],
+    "decodePassed": true,
+    "blackIntervals": []
+  },
+  {
+    "file": "public/videos/level-03/l03_candy_005_poc_e7e3ab4a_original_xfade.mp4",
+    "sha256": "931a9797bd52f3bf38387f10720cd31667d7445d21f2174582d959d929d123bb",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "24/1",
+        "duration": "7.583333",
+        "nb_frames": "182"
+      }
+    ],
+    "decodePassed": true,
+    "blackIntervals": []
+  }
+]

@@ -1,8 +1,8 @@
 """Optional offline QA: run with numpy + opencv-python-headless, not a game dependency."""
 import cv2, numpy as np, json, argparse
 parser=argparse.ArgumentParser()
-parser.add_argument('--source',default='public/videos/level-03/l03_candy_001.mp4')
-parser.add_argument('--out',default='docs/video-tests/l03-candy-001')
+parser.add_argument('--source',default='public/videos/level-03/l03_candy_001_poc_72f19161.mp4')
+parser.add_argument('--out',default='docs/video-tests/l03-candy-001-v2')
 args=parser.parse_args()
 from pathlib import Path
 source = Path(args.source)

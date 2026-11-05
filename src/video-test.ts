@@ -9,58 +9,61 @@ import { CANDY_SCENES as SCENES, CANDY_PROJECTION, CANDY_DURATION } from "./scen
 const $ = <T extends HTMLElement = HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 const VARIANTS = {
-  "original-fade": {
-    file: "l03_candy_001_v2_original_xfade.mp4",
-    label: "原始影片＋0.333 秒淡化 · 7.583 秒 · 無音軌（未做接點剪輯）",
-  },
-  original: {
-    file: "l03_candy_001_v2.mp4",
-    label: "原始影片 · 7.93 秒（含音軌、強制靜音）",
-  },
-  trim: {
-    file: "l03_candy_001_v2_trim.mp4",
-    label: "接點剪輯 · 6.667 秒 · 無音軌",
-  },
-  xfade: {
-    file: "l03_candy_001_v2_xfade.mp4",
-    label: "剪輯＋0.333 秒淡化 · 6.333 秒 · 無音軌",
-  },
+  "original-fade": { label: "完整原片＋首尾交叉淡化" },
+  original: { label: "原始影片（強制靜音）" },
 };
 type Variant = keyof typeof VARIANTS;
 type Scene = keyof typeof SCENES;
-const switchPoC = new URLSearchParams(location.search).has("sceneSwitch");
+const carousel = new URLSearchParams(location.search).has("sceneCarousel");
+const switchPoC = carousel || new URLSearchParams(location.search).has("sceneSwitch");
+let carouselSeconds = 8, sceneStartedAt = 0;
 const requestedScene = new URLSearchParams(location.search).get("scene");
 let scene: Scene = requestedScene && Object.hasOwn(SCENES, requestedScene) ? requestedScene as Scene : "lollipop";
 let fadeFrames = 8;
-const isFade = () => variant === "original-fade" || variant === "xfade";
+const isFade = () => variant === "original-fade";
 function selectedFile() {
-  if (scene !== "lollipop") {
-    if (variant === "original" || fadeFrames === 0) return `${SCENES[scene].stem}.mp4`;
-    return fadeFrames === 8 ? `${SCENES[scene].stem}_original_xfade.mp4`
-      : `fades/${SCENES[scene].fadePrefix}original-${fadeFrames}.mp4`;
-  }
-  if (!isFade() || fadeFrames === 8) return VARIANTS[variant].file;
-  const base = variant === "original-fade" ? "original" : "trim";
-  return fadeFrames === 0 ? VARIANTS[base].file : `fades/v2-${base}-${fadeFrames}.mp4`;
+  if (variant === "original" || fadeFrames === 0) return `${SCENES[scene].stem}.mp4`;
+  return fadeFrames === 8 ? `${SCENES[scene].stem}_original_xfade.mp4`
+    : `fades/${SCENES[scene].fadePrefix}original-${fadeFrames}.mp4`;
 }
-const selectedLabel = () => scene !== "lollipop"
-  ? `${SCENES[scene].label} · ${variant === "original" ? "原始影片（含音軌、強制靜音）" : `完整原片＋${(fadeFrames / 24).toFixed(3)} 秒首尾交叉淡化`}`
-  : isFade()
-  ? `${variant === "original-fade" ? "原始影片" : "剪輯"}＋${(fadeFrames / 24).toFixed(3)} 秒淡化`
-  : VARIANTS[variant].label;
+const selectedLabel = () => `${SCENES[scene].label} · ${isFade()
+  ? `完整原片＋${(fadeFrames / 24).toFixed(3)} 秒首尾交叉淡化` : VARIANTS.original.label}`;
 document.title = "Shape Quest — 糖果王國背景場景比較";
 $("app").innerHTML =
   `<header class="site-header"><a class="brand" href="./">奇形狀<small>SHAPE QUEST / VIDEO LAB</small></a><a class="button quiet" href="./">回到遊戲 ↗</a></header>
-<main class="video-lab"><span class="eyebrow">PHASE 1 · SINGLE-CLIP INTEGRATION</span><h1>糖果王國背景場景比較</h1><p>${Object.values(SCENES).map(scene => scene.label).join("／")} · 候選素材，搭配道路格線與障礙物驗證 · 單一 HTML5 Video 播放器。</p>
-<div class="lab-toolbar"><label>背景場景<select id="scene">${Object.entries(SCENES).map(([id, scene]) => `<option value="${id}">${scene.label}</option>`).join("")}</select></label><label>測試版本<select id="variant"><option value="original-fade">原始影片＋淡化</option><option value="xfade">剪輯＋淡化</option><option value="original">原始影片（無淡化基準）</option><option value="trim">接點剪輯（無淡化基準）</option></select></label><label>淡化秒數 <output id="fade-value" for="fade-duration">0.333 秒</output><input id="fade-duration" type="range" min="0" max="6" step="1" value="2" aria-label="淡化秒數" aria-valuetext="0.333 秒"></label><button id="lab-start" class="button primary">開始 120 秒測試</button><button id="lab-pause" class="button" disabled>暫停</button><button id="lab-export" class="button">匯出紀錄</button></div>
+<main class="video-lab"><span class="eyebrow">CANDY KINGDOM · BACKGROUND INTEGRATION</span><h1>糖果王國背景場景比較</h1><p>${Object.values(SCENES).map(scene => scene.label).join("／")} · 正式素材，搭配獨立三線跑道與障礙物驗證。</p>
+<div class="lab-toolbar"><label>背景場景<select id="scene">${Object.entries(SCENES).map(([id, scene]) => `<option value="${id}">${scene.label}</option>`).join("")}</select></label><label>測試版本<select id="variant"><option value="original-fade">原始影片＋淡化</option><option value="original">原始影片（無淡化基準）</option></select></label><label>淡化秒數 <output id="fade-value" for="fade-duration">0.333 秒</output><input id="fade-duration" type="range" min="0" max="6" step="1" value="2" aria-label="淡化秒數" aria-valuetext="0.333 秒"></label><button id="lab-start" class="button primary">開始 120 秒測試</button><button id="lab-pause" class="button" disabled>暫停</button><button id="lab-export" class="button">匯出紀錄</button></div>
 <section class="stage in-game lab-stage" aria-label="影片合成測試"><video id="lab-video" class="background-video" muted playsinline loop preload="auto"></video><canvas id="lab-world"></canvas><div id="lab-time" class="lab-time">準備載入素材</div><div id="lab-cue" class="lab-cue"></div><div id="lab-notice" class="lab-notice" role="status">尚未開始</div></section>
-<div class="lab-controls"><label class="lab-check"><input id="lab-overlay" type="checkbox" checked>顯示遊戲疊加（障礙物／判定回饋）</label><label>消失點 X<input id="centerX" type="range" min="0.45" max="0.55" step="0.001" value="0.5"></label><label>消失點 Y<input id="horizon" type="range" min="0.30" max="0.48" step="0.001" value="0.42"></label><label>道路底部半寬<input id="nearHalfWidth" type="range" min="0.35" max="0.8" step="0.01" value="0.46"></label><label>固定虛擬速度<input id="speed" type="range" min="2" max="9" step="0.1" value="6"></label><label class="lab-check"><input id="lab-grid" type="checkbox" checked>顯示道路格線／接地點</label></div>
-<p id="lab-source"></p><p>糖果王國各場景預設使用完整原片＋8 影格交叉淡化（0.333 秒），也可選原片比較。首尾交叉淡化可調整為 0～1 秒，每格約 0.167 秒，預設 0.333 秒。淡化預先合成進影片，調整秒數並放開滑桿後套用；播放中會重新開始這輪比較。原始＋淡化不做接點剪輯；剪輯＋淡化沿用既有接點剪輯。循環片長會依首尾重疊秒數縮短，可能看見殘影或景物換位，請直接比較播放效果。</p><p class="lab-help">工程測試可跑 10 分鐘，使用較高生命值以持續出題；失敗照常記錄，不模擬玩家成功。↑／↓／←／→ 可測試動作判定。暫停與倒數不計入有效遊玩時間。改變幾何設定會開始新一輪紀錄。</p>
+<div class="lab-controls"><label class="lab-check"><input id="lab-overlay" type="checkbox" checked>顯示遊戲疊加（障礙物／判定回饋）</label><label>消失點 X<input id="centerX" type="range" min="0.45" max="0.55" step="0.001" value="0.5"></label><label>消失點 Y<input id="horizon" type="range" min="0.30" max="0.48" step="0.001" value="0.42"></label><label>道路底部半寬<input id="nearHalfWidth" type="range" min="0.35" max="0.8" step="0.01" value="0.46"></label><label>固定虛擬速度<input id="speed" type="range" min="2" max="9" step="0.1" value="6"></label><label class="lab-check"><input id="lab-grid" type="checkbox">顯示道路格線／接地點</label></div>
+<p id="lab-source"></p><p>糖果王國各場景預設使用完整原片＋8 影格交叉淡化（0.333 秒），也可選原片比較。首尾交叉淡化可調整為 0～1 秒，每格約 0.167 秒，預設 0.333 秒。淡化預先合成進影片，調整秒數並放開滑桿後套用；播放中會重新開始這輪比較。原片完整保留，不使用舊版接點剪輯。循環片長會依首尾重疊秒數縮短，可能看見殘影或景物換位，請直接比較播放效果。</p><p class="lab-help">工程測試可跑 10 分鐘，使用較高生命值以持續出題；失敗照常記錄，不模擬玩家成功。↑／↓／←／→ 可測試動作判定。暫停與倒數不計入有效遊玩時間。改變幾何設定會開始新一輪紀錄。</p>
 <div class="lab-summary"><section><h2>播放與遊戲時鐘</h2><pre id="lab-summary"></pre><details><summary>完整 JSON 紀錄</summary><pre id="video-metrics"></pre></details></section><section><h2>每次循環接點</h2><p>像素差為 320×180 縮圖的 0–255 MAE；數值低不保證運動連續。縮圖依序為循環前／後。</p><div class="lab-table"><table><thead><tr><th>循環</th><th>有效秒數</th><th>影格間隔 ms</th><th>道路 MAE</th><th>前／後</th></tr></thead><tbody id="seams"></tbody></table></div></section></div></main>`;
-const video = $<HTMLVideoElement>("lab-video");
+let video = $<HTMLVideoElement>("lab-video");
+const modeLabel = document.createElement("label");
+modeLabel.innerHTML = `播放模式<select id="lab-mode"><option value="single">單一場景比較</option><option value="carousel">自動輪播測試</option><option value="manual">手動換片 PoC</option></select>`;
+document.querySelector(".lab-toolbar")!.prepend(modeLabel);
+$<HTMLSelectElement>("lab-mode").value = carousel ? "carousel" : switchPoC ? "manual" : "single";
+$("lab-mode").onchange = () => {
+  const url = new URL(location.href);
+  url.searchParams.delete("sceneSwitch");
+  url.searchParams.delete("sceneCarousel");
+  const mode = $<HTMLSelectElement>("lab-mode").value;
+  if (mode !== "single") url.searchParams.set(mode === "carousel" ? "sceneCarousel" : "sceneSwitch", "1");
+  url.searchParams.set("scene", scene);
+  url.searchParams.set("overlay", $<HTMLInputElement>("lab-overlay").checked ? "1" : "0");
+  location.href = url.href;
+};
+if (carousel) {
+  const intervalLabel = document.createElement("label");
+  intervalLabel.innerHTML = `輪播間隔<select id="lab-interval">${[8, 15, 30].map(s => `<option value="${s}">${s} 秒</option>`).join("")}</select>`;
+  modeLabel.after(intervalLabel);
+  $("lab-interval").onchange = () => {
+    carouselSeconds = Number($<HTMLSelectElement>("lab-interval").value);
+    sceneStartedAt = game.time;
+  };
+}
 const background = new Background(video);
 const renderer = new Renderer($<HTMLCanvasElement>("lab-world"));
-renderer.debug = true;
+renderer.debug = false;
 let game = new Game(switchPoC ? CANDY_DURATION : 600, 3000),
   metrics = new VideoMetrics();
 const requestedVariant = new URLSearchParams(location.search).get("variant") || "original-fade";
@@ -85,12 +88,6 @@ const waitingEvents: { gameTime: number; videoTime: number; durationMs: number |
 let waitingSince: number | null = null;
 let switching = false, switchError = "", queuedScene: Scene | null = null;
 let requestedAt = 0, requestedGameTime = 0, roundStartedAt = 0;
-const heldFrame = document.createElement("canvas");
-heldFrame.id = "lab-held-frame";
-heldFrame.width = 1280;
-heldFrame.height = 720;
-heldFrame.hidden = true;
-heldFrame.setAttribute("aria-hidden", "true");
 const gameState = () => ({
   time: game.time, score: game.score, health: game.health,
   successes: game.successes, misses: game.misses,
@@ -104,15 +101,15 @@ const switches: {
 }[] = [];
 if (switchPoC) {
   variant = "original-fade";
-  video.after(heldFrame);
-  document.title = "Shape Quest — 手動換片 PoC";
-  document.querySelector("h1")!.textContent = "糖果王國手動換片 PoC";
+  document.title = carousel ? "Shape Quest — 場景輪播測試" : "Shape Quest — 手動換片 PoC";
+  document.querySelector("h1")!.textContent = carousel ? "糖果王國場景輪播測試" : "糖果王國手動換片 PoC";
   $("lab-start").after(Object.assign(document.createElement("button"), {
     id: "lab-next", className: "button", textContent: "下一個場景", disabled: true,
   }));
   $("lab-source").after(Object.assign(document.createElement("pre"), { id: "lab-switches" }));
   document.querySelector(".lab-help")!.textContent =
-    "手動按下一個場景，等目前障礙判定結束後換片。載入期間保留上一張背景並凍結遊戲時鐘；分數、生命與出題不重設。遊戲時間 120 秒，實際經過時間另加換片與暫停。方向鍵可操作，工程生命值較高。";
+    (carousel ? "依所選間隔自動預約下一個場景，等目前障礙判定結束後換片；暫停不計入間隔，載入期間遊戲持續。也可按下一個場景提前切換。順序：" + Object.values(SCENES).map(s => s.label).join(" → ") + " → 回到起始場景。" : "手動按下一個場景，等目前障礙判定結束後換片。") +
+    "載入期間原場景繼續播放，新場景就緒後交叉淡化約 0.333 秒；遊戲時鐘、分數、生命與出題不中斷。遊戲時間 120 秒，暫停時間另計。方向鍵可操作，工程生命值較高。";
   for (const key of ["centerX", "horizon", "nearHalfWidth", "speed"])
     $<HTMLInputElement>(key).disabled = true;
 } else {
@@ -126,21 +123,21 @@ function switchControls() {
   $<HTMLSelectElement>("variant").disabled = true;
   $<HTMLInputElement>("fade-duration").disabled = true;
   $<HTMLButtonElement>("lab-start").disabled = !ready || switching || !!queuedScene;
-  $<HTMLButtonElement>("lab-pause").disabled = !started || !ready || switching || game.phase === "finished";
+  $<HTMLButtonElement>("lab-pause").disabled = !started || !ready || game.phase === "finished";
   $<HTMLButtonElement>("lab-next").disabled = !started || switching || !!queuedScene || (!switchError && game.phase !== "playing");
   $("lab-next").textContent = switchError ? "重試下一個場景" : "下一個場景";
 }
-if (switchPoC) $("lab-next").onclick = () => {
+function queueNextScene() {
   if (switching || queuedScene || !started || (!switchError && game.phase !== "playing")) return;
   const order = Object.keys(SCENES) as Scene[];
   queuedScene = order[(order.indexOf(scene) + 1) % order.length];
   requestedAt = performance.now();
   requestedGameTime = game.time;
   switchControls();
-};
+}
+if (switchPoC) $("lab-next").onclick = queueNextScene;
 async function changeScene(target: Scene) {
   const began = performance.now();
-  const retry = !!switchError;
   const record: typeof switches[number] = {
     from: scene, to: target, requestedGameTime, waitMs: began - requestedAt,
     loadMs: null, firstFrameMs: null, freezeMs: 0, status: "loading", before: gameState(),
@@ -149,42 +146,32 @@ async function changeScene(target: Scene) {
   queuedScene = null;
   switching = true;
   switchError = "";
-  ready = false;
-  background.sync(false);
-  if (!retry) heldFrame.getContext("2d")!.drawImage(video, 0, 0, 1280, 720);
-  heldFrame.hidden = false;
-  video.style.visibility = "hidden";
+
   metrics.breakSequence();
   previous = null;
   waitingSince = null;
   switchControls();
   updateUI();
   try {
-    await background.load(asset(`videos/level-03/${SCENES[target].stem}_original_xfade.mp4`), SCENES[target].label);
-    record.loadMs = performance.now() - began;
-    await new Promise<void>((resolve, reject) => {
-      const timeout = setTimeout(() => {
-        video.cancelVideoFrameCallback(callback);
-        reject(new Error("新影片第一張影格等待逾時"));
-      }, 5000);
-      const callback = video.requestVideoFrameCallback(() => { clearTimeout(timeout); resolve(); });
-      background.sync(true);
-    });
-    record.firstFrameMs = performance.now() - began;
+    const timing = await background.transition(asset(`videos/level-03/${SCENES[target].stem}_original_xfade.mp4`), SCENES[target].label);
+    record.loadMs = timing?.loadMs ?? performance.now() - began;
+    record.firstFrameMs = timing?.firstFrameMs ?? record.loadMs;
+    video = background.video;
+    bindVideoEvents();
+    watchVideo();
     scene = target;
+    sceneStartedAt = game.time;
     $<HTMLSelectElement>("scene").value = scene;
-    heldFrame.hidden = true;
     video.style.visibility = "visible";
     ready = true;
     record.status = "passed";
     $("lab-source").textContent = `來源：${selectedFile()} · ${video.videoWidth}×${video.videoHeight} · ${video.duration.toFixed(3)} 秒 · 1.0x`;
   } catch (error) {
     switchError = error instanceof Error ? error.message : "換片失敗";
-    background.sync(false);
     record.status = "failed";
     record.error = switchError;
   } finally {
-    record.freezeMs = performance.now() - began;
+    record.freezeMs = 0;
     record.after = gameState();
     switching = false;
     metrics.breakSequence();
@@ -195,7 +182,7 @@ async function changeScene(target: Scene) {
     updateUI();
   }
 }
-if (scene !== "lollipop" && variant !== "original") variant = "original-fade";
+
 $<HTMLSelectElement>("scene").value = scene;
 $<HTMLSelectElement>("variant").value = variant;
 const load = async (autoStart = false) => {
@@ -208,7 +195,7 @@ const load = async (autoStart = false) => {
   game.phase = "idle";
   $("lab-start").setAttribute("disabled", "");
   $("lab-pause").setAttribute("disabled", "");
-  $("lab-notice").textContent = "載入候選影片中…";
+  $("lab-notice").textContent = "載入正式場景中…";
   try {
     await background.load(
       asset(`videos/level-03/${selectedFile()}`),
@@ -226,8 +213,6 @@ const load = async (autoStart = false) => {
   } finally {
     $<HTMLSelectElement>("scene").disabled = false;
     $<HTMLSelectElement>("variant").disabled = false;
-    for (const option of $<HTMLSelectElement>("variant").options)
-      option.disabled = scene !== "lollipop" && ["trim", "xfade"].includes(option.value);
     $<HTMLInputElement>("fade-duration").disabled = !isFade();
     $("fade-value").textContent = isFade() ? `${(fadeFrames / 24).toFixed(3)} 秒` : "無淡化基準";
     switchControls();
@@ -256,21 +241,17 @@ function start() {
   started = true;
   switches.length = 0;
   roundStartedAt = performance.now();
+  sceneStartedAt = 0;
   last = performance.now();
   $("lab-pause").removeAttribute("disabled");
   $("lab-pause").textContent = "暫停";
   $("lab-notice").textContent = "測試中 · 120 秒後會標記達標並繼續播放。";
   switchControls();
+  updateUI();
 }
-video.addEventListener("seeked", () => {
-  if (intentionalSeek) {
-    intentionalSeek = false;
-    metrics.breakSequence();
-    previous = null;
-  }
-});
+
 function pause() {
-  if (!started || switching || !ready) return;
+  if (!started || !ready) return;
   if (game.phase === "paused") {
     game.clearPause("manual");
     game.clearPause("hidden");
@@ -284,6 +265,14 @@ function pause() {
     $("lab-pause").textContent = "恢復（倒數 3 秒）";
   }
 }
+function bindVideoEvents() {
+video.addEventListener("seeked", () => {
+  if (intentionalSeek) {
+    intentionalSeek = false;
+    metrics.breakSequence();
+    previous = null;
+  }
+});
 video.addEventListener("waiting", () => {
   if (started && game.phase === "playing" && !switching) {
     metrics.waiting++;
@@ -300,7 +289,15 @@ video.addEventListener("playing", () => {
 video.addEventListener("stalled", () => {
   if (started && game.phase === "playing") metrics.stalled++;
 });
-function onVideoFrame(now: number, metadata: VideoFrameCallbackMetadata) {
+}
+bindVideoEvents();
+
+function watchVideo() {
+  const source = video;
+  source.requestVideoFrameCallback((now, metadata) => onVideoFrame(now, metadata, source));
+}
+function onVideoFrame(now: number, metadata: VideoFrameCallbackMetadata, source: HTMLVideoElement) {
+  if (source !== video) return;
   if (
     started &&
     !switching &&
@@ -313,7 +310,8 @@ function onVideoFrame(now: number, metadata: VideoFrameCallbackMetadata) {
     let full = 0,
       road = 0,
       roadPixels = 0;
-    if (previous)
+    // Pixel differences are reported only at native loop boundaries.
+    if (previous && metrics.isWrap(metadata.mediaTime, video.duration))
       for (let y = 0; y < 180; y++)
         for (let x = 0; x < 320; x++) {
           const i = (y * 320 + x) * 4;
@@ -340,16 +338,19 @@ function onVideoFrame(now: number, metadata: VideoFrameCallbackMetadata) {
     }
     previous = current;
   }
-  video.requestVideoFrameCallback(onVideoFrame);
+  watchVideo();
 }
-if (video.requestVideoFrameCallback)
-  video.requestVideoFrameCallback(onVideoFrame);
+if (typeof video.requestVideoFrameCallback === "function")
+  watchVideo();
 else
   $("lab-notice").textContent =
     "此瀏覽器不支援影格回呼，無法提供精確循環影格監測；請使用新版瀏覽器。";
 function snapshot() {
   const q = video.getVideoPlaybackQuality();
   return {
+    carousel,
+    carouselSeconds: carousel ? carouselSeconds : null,
+    nextSceneIn: carousel ? Math.max(0, carouselSeconds - (game.time - sceneStartedAt)) : null,
     switchPoC,
     switching,
     queuedScene,
@@ -365,7 +366,7 @@ function snapshot() {
     variant,
     file: selectedFile(),
     fadeSeconds: isFade() ? fadeFrames / 24 : 0,
-    status: "candidate",
+    status: "approved",
     targetSeconds: 120,
     activeSeconds: metrics.activeSeconds,
     reached120: metrics.activeSeconds >= 120,
@@ -408,14 +409,14 @@ function updateUI() {
           ? `${LABEL[game.next.action]} · 接地十字與格線供比對`
           : "等待測試障礙";
   if (switchPoC) {
-    $("lab-notice").textContent = switching ? "正在換片，保留上一張背景，遊戲時鐘暫停…"
-      : switchError ? `換片失敗：${switchError}。畫面與遊戲保持凍結，可按重試。`
+    $("lab-notice").textContent = switching ? "正在載入並交叉淡化，遊戲持續進行…"
+      : switchError ? `換片失敗：${switchError}。保留原場景繼續遊玩，可按重試。`
       : queuedScene ? `已預約 ${SCENES[queuedScene].label}，等待目前障礙判定結束。`
       : game.phase === "finished" ? "120 秒遊戲結束，換片紀錄可匯出。"
-      : started ? `${SCENES[scene].label} · 分數 ${game.score} · 生命 ${game.health} · 換片等待另計實際時間。`
-      : ready ? "選好起始場景後按開始，再手動切換下一個場景。" : $("lab-notice").textContent;
+      : started ? `${SCENES[scene].label} · 分數 ${game.score} · 生命 ${game.health} · ${carousel ? `下一場景倒數 ${data.nextSceneIn!.toFixed(1)} 秒` : "換片期間遊戲持續進行。"}`
+      : ready ? (carousel ? "選好起始場景與輪播間隔後按開始，四個場景將依序循環。" : "選好起始場景後按開始，再手動切換下一個場景。") : $("lab-notice").textContent;
     $("lab-switches").textContent = `實際經過 ${data.wallSeconds.toFixed(2)} 秒 · 遊戲 ${game.time.toFixed(2)} 秒\n` +
-      switches.map(s => `${SCENES[s.from].label} → ${SCENES[s.to].label} · ${s.status} · 等待空檔 ${s.waitMs.toFixed(1)} ms · 載入 ${s.loadMs?.toFixed(1) ?? "—"} ms · 首幀 ${s.firstFrameMs?.toFixed(1) ?? "—"} ms · 凍結 ${s.freezeMs.toFixed(1)} ms`).join("\n");
+      switches.map(s => `${SCENES[s.from].label} → ${SCENES[s.to].label} · ${s.status} · 等待空檔 ${s.waitMs.toFixed(1)} ms · 載入 ${s.loadMs?.toFixed(1) ?? "—"} ms · 首幀 ${s.firstFrameMs?.toFixed(1) ?? "—"} ms · 遊戲凍結 ${s.freezeMs.toFixed(1)} ms`).join("\n");
     switchControls();
   } else if (metrics.activeSeconds >= 120)
     $("lab-notice").textContent =
@@ -436,24 +437,26 @@ function frame(now: number) {
   const dt = Math.max(0, (now - last) / 1000);
   last = now;
   const playing =
-    started && ready && !switching && game.phase === "playing" && !intentionalSeek;
+    started && ready && game.phase === "playing" && !intentionalSeek;
   if (playing && !video.paused) {
     activeMs += dt * 1000;
     metrics.activeSeconds = activeMs / 1000;
   }
-  if (started && ready && !switching && !intentionalSeek) game.tick(Math.min(dt, 0.1));
+  if (started && ready && !intentionalSeek) game.tick(Math.min(dt, 0.1));
+  if (carousel && ready && !switchError && game.time - sceneStartedAt >= carouselSeconds)
+    queueNextScene();
   if (queuedScene && (switchError || (game.phase === "playing" && !game.next && video.readyState >= 2 && !video.seeking)))
     void changeScene(queuedScene);
   if (queuedScene && game.phase === "finished") queuedScene = null;
   const nextPlaying =
-    started && ready && !switching && game.phase === "playing" && !intentionalSeek;
+    started && ready && game.phase === "playing" && !intentionalSeek;
   if (lastPlaying && !nextPlaying) {
     metrics.breakSequence();
     previous = null;
   }
   lastPlaying = nextPlaying;
-  if (!switching) background.sync(nextPlaying);
-  renderer.draw(game, game.time, background.visible || !heldFrame.hidden);
+  background.sync(nextPlaying);
+  renderer.draw(game, game.time, background.visible);
   if (now - lastUI > 250) {
     updateUI();
     lastUI = now;
@@ -535,7 +538,7 @@ document.addEventListener("keydown", (event) => {
     ArrowLeft: "left",
     ArrowRight: "right",
   };
-  if (actions[event.key] && !switching && ready) {
+  if (actions[event.key] && ready) {
     event.preventDefault();
     game.accept({
       id: sequence++,

@@ -1,17 +1,17 @@
 import { CONFIG, type Projection } from "./config";
 
 export const CANDY_SCENES = {
-  lollipop: { label: "棒棒糖森林大道", englishName: "Lollipop Forest Avenue", stem: "l03_candy_001_v2", fadePrefix: "v2-" },
-  chocolate: { label: "巧克力湖畔", englishName: "Chocolate Lakeside", stem: "l03_candy_003", fadePrefix: "003-" },
-  gummy: { label: "果凍軟糖城", englishName: "Gummy Jelly Town", stem: "l03_candy_004", fadePrefix: "004-" },
-  "cotton-candy": { label: "棉花糖森林", englishName: "Cotton Candy Forest", stem: "l03_candy_005_v2", fadePrefix: "005-v2-" },
+  lollipop: { label: "棒棒糖森林", englishName: "Lollipop Forest", stem: "l03_candy_001_poc_72f19161", fadePrefix: "001-" },
+  chocolate: { label: "巧克力河流", englishName: "Chocolate River", stem: "l03_candy_003_poc_9ab4f711", fadePrefix: "003-" },
+  gummy: { label: "果凍軟糖城鎮", englishName: "Gummy Candy Town", stem: "l03_candy_004_poc_36c9edb4", fadePrefix: "004-" },
+  "cotton-candy": { label: "棉花糖天空", englishName: "Marshmallow Sky", stem: "l03_candy_005_poc_e7e3ab4a", fadePrefix: "005-" },
 } as const;
 export const CANDY_DURATION = 120;
-// Reuse the Video Lab calibration for the candy kingdom scenes.
+// Shared Canvas geometry: centered at 45% height, full-width at the near plane.
 export const CANDY_PROJECTION: Projection = {
   ...CONFIG.projection,
   centerX: 0.5,
-  horizon: 0.41,
-  nearHalfWidth: 0.64,
+  horizon: 0.45,
+  nearHalfWidth: 0.5,
   speed: 5,
 };

@@ -1,3 +1,4 @@
+import { drawCameraImage } from "./camera-orientation";
 import type { Action } from "./config";
 import { FACE_LABEL, FACE_CHANNEL_LABEL, faceActionParts, type FaceProfile, type FaceFeatures, type FaceBaseline } from "./face-actions";
 
@@ -79,29 +80,23 @@ export interface CameraFaceGuide {
   profile?: FaceProfile;
 }
 export function drawFaceCamera(canvas: HTMLCanvasElement, video: HTMLVideoElement,
-  baseline: FaceBaseline | null, guide?: CameraFaceGuide) {
+  baseline: FaceBaseline | null, guide?: CameraFaceGuide, rotation = 0) {
   let w = guide ? Math.max(640, canvas.clientWidth) : 640;
   let h = guide && canvas.clientWidth && canvas.clientHeight
-    ? Math.max(360, Math.round(w * canvas.clientHeight / canvas.clientWidth))
-    : video.videoWidth ? w * video.videoHeight / video.videoWidth : 480;
+    ? Math.max(1, Math.round(w * canvas.clientHeight / canvas.clientWidth))
+    : video.videoWidth ? w * (Math.abs(rotation / 90) % 2 === 1 ? video.videoWidth / video.videoHeight : video.videoHeight / video.videoWidth) : 480;
   if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
   const c = canvas.getContext("2d")!;
   c.clearRect(0, 0, w, h);
-  const desktopGuide = !!guide && canvas.clientWidth > 600;
-  const overlayScale = desktopGuide ? 0.75 : 1;
+  const overlayScale = guide ? Math.min(1, h / 620) : 1;
   if (video.readyState >= 2) {
-    // Reserve the desktop caption space so it never covers the camera image.
-    const top = desktopGuide ? 45 * overlayScale : 0;
-    const videoHeight = desktopGuide ? h - top - 190 * overlayScale : h;
-    const scale = desktopGuide
-      ? Math.min(w / video.videoWidth, videoHeight / video.videoHeight)
-      : Math.max(w / video.videoWidth, h / video.videoHeight);
-    const vw = video.videoWidth * scale, vh = video.videoHeight * scale;
-    c.save(); c.translate(w, 0); c.scale(-1, 1);
-    c.drawImage(video, (w - vw) / 2, top + (videoHeight - vh) / 2, vw, vh); c.restore();
+    // Reserve caption space at every size so instructions never cover the camera image.
+    const top = guide ? 45 * overlayScale : 0;
+    const videoHeight = guide ? h - top - 190 * overlayScale : h;
+    drawCameraImage(c, video, 0, top, w, videoHeight, rotation, !!guide);
   }
   if (!guide) return; // During play the camera stays a simple preview.
-  // Size desktop overlays in screen pixels instead of enlarging the mobile UI.
+  // Fit the instruction artwork to the available height, including short phones.
   c.save(); c.scale(overlayScale, overlayScale);
   w /= overlayScale; h /= overlayScale;
   const action = guide.action;

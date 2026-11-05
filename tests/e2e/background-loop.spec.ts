@@ -29,8 +29,8 @@ test("native loop keeps the loaded video visible while the decoder seeks", async
     }));
     reports.push({ scene, variant, ...result });
   }
-  await mkdir("docs/video-tests/l03-candy-005-v2", { recursive: true });
-  await writeFile("docs/video-tests/l03-candy-005-v2/loop-fallback.json", JSON.stringify(reports, null, 2) + "\n");
+  await mkdir("test-results/candy-kingdom", { recursive: true });
+  await writeFile("test-results/candy-kingdom/loop-fallback.json", JSON.stringify(reports, null, 2) + "\n");
   for (const result of reports) {
     expect(result.loops).toBeGreaterThanOrEqual(1);
     expect(result.fallbackFrames).toEqual([]);

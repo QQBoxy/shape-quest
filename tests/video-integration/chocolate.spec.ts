@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
 for (const scene of ["chocolate", "lollipop", "gummy", "cotton-candy"]) {
-  const output = scene === "cotton-candy" ? "docs/video-tests/l03-candy-005-v2" : scene === "gummy" ? "docs/video-tests/l03-candy-004" : "docs/video-tests/l03-candy-003";
+  const output = scene === "cotton-candy" ? "test-results/candy-kingdom" : scene === "gummy" ? "test-results/candy-kingdom" : "test-results/candy-kingdom";
   test(`${scene}: 120 wall seconds, overlays and independent game clock`, async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", error => errors.push(error.message));
@@ -11,13 +11,17 @@ for (const scene of ["chocolate", "lollipop", "gummy", "cotton-candy"]) {
     expect(await page.locator("video").count()).toBe(1);
     const metrics = async () => JSON.parse(await page.locator("#video-metrics").textContent() || "{}");
     await page.locator("#lab-start").click();
+    let expectedSuccesses = 0;
     for (const [time, action, key] of [
       [4.5, "jump", "ArrowUp"], [8.5, "duck", "ArrowDown"],
       [12.5, "left", "ArrowLeft"], [16.5, "right", "ArrowRight"],
     ] as const) {
-      await expect.poll(async () => (await metrics()).gameTime, { timeout: 10000, intervals: [50] }).toBeGreaterThan(time);
+      // Capture during the preview so screenshot work cannot consume the 0.6s action window.
+      await expect.poll(async () => (await metrics()).gameTime, { timeout: 10000, intervals: [50] }).toBeGreaterThan(time - 2);
       await page.locator(".lab-stage").screenshot({ path: `${output}/${scene}-${action}-overlay.png` });
+      await expect.poll(async () => (await metrics()).gameTime, { timeout: 10000, intervals: [50] }).toBeGreaterThan(time);
       await page.keyboard.press(key);
+      await expect.poll(async () => (await metrics()).successes).toBe(++expectedSuccesses);
     }
     await expect.poll(async () => (await metrics()).successes).toBe(4);
     const overlaySuccesses = (await metrics()).successes;
@@ -25,9 +29,15 @@ for (const scene of ["chocolate", "lollipop", "gummy", "cotton-candy"]) {
     const wallStart = Date.now();
     await page.locator("#lab-start").click();
     // Real native decoding at 1.0x; no synthetic clock or accelerated playback.
-    await expect.poll(async () => (await metrics()).activeSeconds, {
-      timeout: 135000, intervals: [1000],
-    }).toBeGreaterThanOrEqual(120);
+    for (const seconds of [30, 60, 90, 120]) {
+      await expect.poll(async () => (await metrics()).activeSeconds, {
+        timeout: 45000, intervals: [1000],
+      }).toBeGreaterThanOrEqual(seconds);
+      const progress = await metrics();
+      console.log(JSON.stringify({ scene, activeSeconds: progress.activeSeconds,
+        loops: progress.loops.length, frames: progress.frameCount, stalled: progress.stalled,
+        gapsOver250ms: progress.gapsOver250ms }));
+    }
     const wallSeconds = (Date.now() - wallStart) / 1000;
     await page.locator("#lab-pause").click();
     await expect.poll(async () => (await metrics()).gamePhase).toBe("paused");

@@ -380,10 +380,15 @@ it("does not treat a held pose or missing tracking as a completed release", () =
   hold({ pitch: -4.5 }, 150); expect(c.step).toBe(2);
 });
 
-it("keeps the full desktop camera image above the caption instead of scaling a mobile overlay", () => {
-  let image: number[] = [];
+it("keeps the full camera image above the caption with uniform scaling", () => {
+  let image: number[] = [], translation = [0,0], scaling = [1,1];
   const context = new Proxy({
-    drawImage: (_video: unknown, ...bounds: number[]) => { image = bounds; },
+    translate: (x: number, y: number) => { if (!image.length) translation = [x,y]; },
+    scale: (x: number, y: number) => { if (!image.length) scaling = [scaling[0]*x,scaling[1]*y]; },
+    drawImage: (video: HTMLVideoElement, x: number, y: number) => {
+      const width = video.videoWidth * Math.abs(scaling[0]), height = video.videoHeight * Math.abs(scaling[1]);
+      image = [translation[0]-width/2,translation[1]-height/2,width,height];
+    },
     measureText: (text: string) => ({ width: text.length * 24 }),
   }, { get: (target, key) => Reflect.get(target, key) ?? (() => {}) });
   const canvas = { clientWidth: 1464, clientHeight: 600, width: 0, height: 0,

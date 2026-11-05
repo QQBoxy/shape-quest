@@ -6,11 +6,33 @@ test("candy integration pauses both clocks and video seeking cannot reset judgem
   test.setTimeout(60000);
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
+  await page.addInitScript(() => {
+    const records: { media: number; differences: number }[] = [];
+    Object.assign(window, { pixelFrameWork: records });
+    const absolute = Math.abs;
+    let inFrame = false, differences = 0;
+    Math.abs = value => {
+      if (inFrame) differences++;
+      return absolute(value);
+    };
+    const requestFrame = HTMLVideoElement.prototype.requestVideoFrameCallback;
+    HTMLVideoElement.prototype.requestVideoFrameCallback = function(callback) {
+      return requestFrame.call(this, (now, metadata) => {
+        differences = 0;
+        inFrame = true;
+        try { callback(now, metadata); }
+        finally {
+          inFrame = false;
+          records.push({ media: metadata.mediaTime, differences });
+        }
+      });
+    };
+  });
   await page.goto("./?videoTest=1");
   await expect(page.locator("#lab-start")).toBeEnabled({ timeout: 20000 });
   const metrics = async () =>
     JSON.parse((await page.locator("#video-metrics").textContent()) || "{}");
-  const res = await request.head("videos/level-03/l03_candy_001_v2.mp4");
+  const res = await request.head("videos/level-03/l03_candy_001_poc_72f19161.mp4");
   expect(res.ok()).toBe(true);
   expect(res.headers()["content-type"]).toContain("video");
   await page.locator("#lab-start").click();
@@ -35,6 +57,20 @@ test("candy integration pauses both clocks and video seeking cannot reset judgem
   await page.locator("#lab-pause").click();
   await expect.poll(async () => (await metrics()).gamePhase).toBe("paused");
   const before = await metrics();
+  expect(before.loops.length).toBeGreaterThan(0);
+  expect(before.loops[0].fullMAE).toBeGreaterThan(0);
+  expect(before.loops[0].roadMAE).toBeGreaterThan(0);
+  const work = await page.evaluate(() => (window as any).pixelFrameWork as { media: number; differences: number }[]);
+  expect(work.filter(frame => frame.differences > 0)).toHaveLength(before.loops.length);
+  expect(work.filter(frame => frame.differences === 0).length).toBeGreaterThan(100);
+  for (const [index, frame] of work.entries()) {
+    if (frame.differences > 0) {
+      // RGB deltas are the minimum; the road mask also calls Math.abs.
+      expect(frame.differences).toBeGreaterThanOrEqual(320 * 180 * 3);
+      expect(work[index - 1].media - frame.media).toBeGreaterThan(before.duration / 2);
+    }
+  }
+  await expect(page.locator("#seams img").first()).toBeVisible();
   await page.waitForTimeout(1200); // Real pause duration, not an accelerated clock.
   const after = await metrics();
   expect(after.gameTime).toBe(before.gameTime);

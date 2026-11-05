@@ -1,20 +1,22 @@
 export class Background {
   url: string | null = null;
-  status = "程式草原 · 等待正式影片";
+  status = "程式動態背景 · 陽光草原";
   private preparing = false;
   private playPending = false;
   private shouldPlay = false;
   private objectUrl = false;
-  constructor(readonly video: HTMLVideoElement) {
+  private incoming: Background | null = null;
+  private loadVersion = 0;
+  private onError = () => {
+    if (this.preparing) return;
+    this.status = "影片載入／解碼失敗，已切回程式背景";
+    this.clear();
+  };
+  constructor(public video: HTMLVideoElement) {
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
-    video.addEventListener("error", () => {
-      // choose() handles its own load failure; runtime decode errors use the fallback.
-      if (this.preparing) return;
-      this.status = "影片載入／解碼失敗，已切回程式背景";
-      this.clear();
-    });
+    video.addEventListener("error", this.onError);
   }
   async choose(file: File) {
     if (!/^video\//.test(file.type) && !/\.mp4$/i.test(file.name))
@@ -26,7 +28,50 @@ export class Background {
     );
   }
   async load(path: string, label: string) {
-    return this.prepare(path, `候選素材：${label}（未驗收）`, false);
+    return this.prepare(path, label, false);
+  }
+  async transition(path: string, label: string, seconds = 1 / 3) {
+    if (!this.visible || !this.video.parentElement) return this.load(path, label);
+    const version = ++this.loadVersion, began = performance.now();
+    const old = this.video;
+    const next = document.createElement("video");
+    next.className = old.className;
+    next.id = `${old.id}-incoming`;
+    next.style.opacity = "0";
+    next.style.pointerEvents = "none";
+    old.after(next);
+    const prepared = new Background(next);
+    this.incoming = prepared;
+    try {
+      await prepared.load(path, label);
+      const loadMs = performance.now() - began;
+      if (version !== this.loadVersion) throw new DOMException("Scene load cancelled", "AbortError");
+      prepared.sync(this.shouldPlay);
+      if (this.shouldPlay && typeof next.requestVideoFrameCallback === "function") await new Promise<void>((resolve, reject) => {
+        const timeout = setTimeout(() => reject(new Error("新場景影格等待逾時")), 5000);
+        next.requestVideoFrameCallback(() => { clearTimeout(timeout); resolve(); });
+      });
+      const firstFrameMs = performance.now() - began;
+      // Fade only the new opaque frame over the still-playing old clip. This
+      // keeps the combined background opaque and leaves the game clock alone.
+      const animation = next.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: seconds * 1000, fill: "forwards", easing: "linear",
+      });
+      await animation.finished;
+      if (version !== this.loadVersion) throw new DOMException("Scene load cancelled", "AbortError");
+      prepared.video.removeEventListener("error", prepared.onError);
+      old.removeEventListener("error", this.onError);
+      const id = old.id;
+      old.pause(); old.removeAttribute("src"); old.load(); old.remove();
+      if (this.url && this.objectUrl) URL.revokeObjectURL(this.url);
+      this.video = next; this.url = path; this.status = label; this.objectUrl = false;
+      next.id = id; next.style.opacity = "1"; animation.cancel();
+      next.addEventListener("error", this.onError);
+      return { loadMs, firstFrameMs, transitionMs: performance.now() - began };
+    } catch (error) {
+      prepared.clear(); next.remove();
+      throw error;
+    } finally { if (this.incoming === prepared) this.incoming = null; }
   }
   private async prepare(path: string, label: string, objectUrl: boolean) {
     this.clear();
@@ -77,6 +122,7 @@ export class Background {
   }
   sync(playing: boolean) {
     this.shouldPlay = playing;
+    this.incoming?.sync(playing);
     if (!this.url || this.preparing) return;
     this.video.playbackRate = 1;
     if (!playing) {
@@ -102,6 +148,8 @@ export class Background {
       });
   }
   clear() {
+    this.loadVersion++;
+    if (this.incoming) { this.incoming.clear(); this.incoming.video.remove(); this.incoming = null; }
     this.video.pause();
     this.video.removeAttribute("src");
     this.video.load();

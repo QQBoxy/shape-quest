@@ -33,6 +33,10 @@ export class Calibration {
     this.since = null;
     this.progress = 0;
   }
+  interrupt() {
+    this.samples = []; this.since = null; this.progress = 0;
+    this.actionSamples = 0; this.returnSince = null; this.lastAt = -Infinity;
+  }
   get returning() { return this.observed; }
   update(f: Features | null, now: number) {
     if (this.done || !Number.isFinite(now)) return;

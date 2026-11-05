@@ -1,0 +1,182 @@
+[
+  {
+    "file": "public/videos/level-03/fades/001-original-12.mp4",
+    "overlapFrames": 12,
+    "videoFrames": 178,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/001-original-16.mp4",
+    "overlapFrames": 16,
+    "videoFrames": 174,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/001-original-20.mp4",
+    "overlapFrames": 20,
+    "videoFrames": 170,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/001-original-24.mp4",
+    "overlapFrames": 24,
+    "videoFrames": 166,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/001-original-4.mp4",
+    "overlapFrames": 4,
+    "videoFrames": 186,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/003-original-12.mp4",
+    "overlapFrames": 12,
+    "videoFrames": 178,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/003-original-16.mp4",
+    "overlapFrames": 16,
+    "videoFrames": 174,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/003-original-20.mp4",
+    "overlapFrames": 20,
+    "videoFrames": 170,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/003-original-24.mp4",
+    "overlapFrames": 24,
+    "videoFrames": 166,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/003-original-4.mp4",
+    "overlapFrames": 4,
+    "videoFrames": 186,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/004-original-12.mp4",
+    "overlapFrames": 12,
+    "videoFrames": 178,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/004-original-16.mp4",
+    "overlapFrames": 16,
+    "videoFrames": 174,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/004-original-20.mp4",
+    "overlapFrames": 20,
+    "videoFrames": 170,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/004-original-24.mp4",
+    "overlapFrames": 24,
+    "videoFrames": 166,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/004-original-4.mp4",
+    "overlapFrames": 4,
+    "videoFrames": 186,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/005-original-12.mp4",
+    "overlapFrames": 12,
+    "videoFrames": 178,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/005-original-16.mp4",
+    "overlapFrames": 16,
+    "videoFrames": 174,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/005-original-20.mp4",
+    "overlapFrames": 20,
+    "videoFrames": 170,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/005-original-24.mp4",
+    "overlapFrames": 24,
+    "videoFrames": 166,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  },
+  {
+    "file": "public/videos/level-03/fades/005-original-4.mp4",
+    "overlapFrames": 4,
+    "videoFrames": 186,
+    "mutedOutput": true,
+    "width": 1280,
+    "height": 720,
+    "fps": 24
+  }
+]

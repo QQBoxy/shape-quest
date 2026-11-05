@@ -66,3 +66,61 @@ it("opens the requested rear or physical lens at its available minimum zoom", as
     expect(track.stop).toHaveBeenCalled();
   } finally { vi.unstubAllGlobals(); }
 });
+
+it.each(["insecure", "unavailable"])("rejects %s camera access before requesting media", async reason => {
+  const { openCamera } = await import("../../src/camera");
+  const getUserMedia = vi.fn();
+  vi.stubGlobal("window", { isSecureContext: reason !== "insecure" });
+  vi.stubGlobal("navigator", { mediaDevices: reason === "unavailable" ? undefined : { getUserMedia } });
+  try {
+    await expect(openCamera({} as HTMLVideoElement)).rejects.toThrow("HTTPS");
+    expect(getUserMedia).not.toHaveBeenCalled();
+  } finally { vi.unstubAllGlobals(); }
+});
+
+it.each(["wrong lens", "playback", "cancel after zoom", "unsupported zoom"])("cleans up camera failures and tolerates %s", async scenario => {
+  const { openCamera } = await import("../../src/camera");
+  let active = true;
+  const track = {
+    stop: vi.fn(),
+    getSettings: () => ({ facingMode: scenario === "wrong lens" ? "user" : "environment" }),
+    getCapabilities: () => ({ zoom: { min: 0.5, max: 4 } }),
+    applyConstraints: vi.fn(async () => {
+      if (scenario === "cancel after zoom") active = false;
+      if (scenario === "unsupported zoom") throw new Error("unsupported");
+    }),
+  };
+  const stream = { getVideoTracks: () => [track], getTracks: () => [track] };
+  const video = { srcObject: null, play: vi.fn(async () => {
+    if (scenario === "playback") throw new Error("play failed");
+  }) };
+  vi.stubGlobal("window", { isSecureContext: true });
+  vi.stubGlobal("navigator", { mediaDevices: { getUserMedia: async () => stream } });
+  try {
+    const opening = openCamera(video as unknown as HTMLVideoElement, () => active, { facingMode: "environment" });
+    if (scenario === "unsupported zoom") {
+      await expect(opening).resolves.toBe(stream);
+      expect(track.stop).not.toHaveBeenCalled();
+      expect(video.srcObject).toBe(stream);
+    } else {
+      await expect(opening).rejects.toThrow();
+      expect(track.stop).toHaveBeenCalledTimes(1);
+      expect(video.srcObject).toBeNull();
+    }
+  } finally { vi.unstubAllGlobals(); }
+});
+
+it("preserves permission errors and maps browser failures to actionable messages", async () => {
+  const { openCamera, cameraError } = await import("../../src/camera");
+  const error = new DOMException("denied", "NotAllowedError");
+  vi.stubGlobal("window", { isSecureContext: true });
+  vi.stubGlobal("navigator", { mediaDevices: { getUserMedia: async () => { throw error; } } });
+  try { await expect(openCamera({} as HTMLVideoElement)).rejects.toBe(error); }
+  finally { vi.unstubAllGlobals(); }
+  for (const [name, text] of [
+    ["NotAllowedError", "權限"], ["NotFoundError", "找不到"], ["NotReadableError", "占用"],
+    ["OverconstrainedError", "設定"], ["SecurityError", "HTTPS"], ["UnknownError", "重新整理"],
+  ]) expect(cameraError(new DOMException("failed", name))).toContain(text);
+  expect(cameraError(new Error("specific failure"))).toBe("specific failure");
+  expect(cameraError(null)).toContain("啟動失敗");
+});

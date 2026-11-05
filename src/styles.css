@@ -2009,3 +2009,42 @@ body.game-shell {
   #stage .home-panel .primary { min-height: 40px; padding-block: 7px; }
   #stage .manual-link { padding-block: 5px; min-height: 34px; }
 }
+
+/* Calibration follows the physical camera side; portrait keeps its stacked layout. */
+@media (orientation: landscape) {
+  .camera-session #stage:is(.is-calibrating, .is-recovering) {
+    grid-template-columns: minmax(0, 3fr) minmax(260px, 2fr);
+    grid-template-rows: minmax(0, 1fr);
+    gap: 12px;
+    padding: var(--camera-toolbar-bottom) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  }
+  .camera-session #stage:is(.is-calibrating, .is-recovering) .camera-preview {
+    grid-column: 1; grid-row: 1; min-width: 0; overflow: hidden;
+  }
+  .camera-session #stage .calibration-panel,
+  .camera-session #stage.is-recovering .dialog {
+    grid-column: 2; grid-row: 1; min-width: 0; max-height: 100%; overflow-y: auto;
+  }
+  .face-session #stage .calibration-panel {
+    display: flex; flex-direction: column; justify-content: center; gap: 16px;
+  }
+  .face-session #stage .calibration-progress { width: 100%; flex: none; }
+  .face-session #stage .calibration-actions { flex-direction: column; width: 100%; gap: 8px; }
+  .face-session #stage .calibration-actions > .button { width: 100%; min-height: 44px; }
+  body[data-camera-side="right"].camera-session #stage:is(.is-calibrating, .is-recovering) {
+    grid-template-columns: minmax(260px, 2fr) minmax(0, 3fr);
+  }
+  body[data-camera-side="right"].camera-session #stage:is(.is-calibrating, .is-recovering) .camera-preview { grid-column: 2; }
+  body[data-camera-side="right"].camera-session #stage .calibration-panel,
+  body[data-camera-side="right"].camera-session #stage.is-recovering .dialog { grid-column: 1; }
+}
+body[data-camera-side="left"].camera-session #stage.in-game:not(.is-recovering) .camera-preview {
+  left: max(12px, env(safe-area-inset-left)); right: auto;
+}
+body[data-camera-side="right"].camera-session #stage.in-game:not(.is-recovering) .camera-preview {
+  right: max(12px, env(safe-area-inset-right)); left: auto;
+}
+@media (orientation: landscape) and (min-height: 551px) {
+  .face-session #stage .calibration-actions { flex-direction: row; flex-wrap: wrap; }
+  .face-session #stage .calibration-actions > .button { width: auto; }
+}
